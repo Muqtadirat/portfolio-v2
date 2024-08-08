@@ -3,7 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { arrowDown, arrowUpRight, checker } from '@/assets/asset';
-// import Player from 'lottie-react';
+import WorkHistory from './History';
 
 const Home = () => {
   return (
@@ -38,15 +38,7 @@ const Home = () => {
               Typescript and I am exploring Express Js, Mongoose, Node.js
             </p>
             {/* icons*/}
-            <div>
-              {/* <Player
-                autoplay
-                loop
-                // src={reactJS}
-                animationData={reactJS}
-                style={{ height: '100px', width: '100px' }}
-              /> */}
-            </div>
+            <div></div>
           </div>
         </div>
       </header>
@@ -62,11 +54,21 @@ const Home = () => {
           positively change the way humans do things. I like to create memorable
           experience for human-computer interactions.
         </p>
-        <Link href="/about" className="flex items-center gap-2">
+        <Link
+          href="/about"
+          className="flex items-center gap-2 hover:opacity-50 transition-all duration-300 ease-in-out"
+        >
           <p>More about me</p>
           <Image src={arrowUpRight} alt="Arrow up right" />
         </Link>
       </section>
+
+      <WorkHistory />
+      <div className="mt-6 lg:mt-[5.5rem] space-y-2 lg:space-y-14">
+        <hr />
+        <h4 className="text-3xl lg:text-[9.313rem] font-bricolage">My work</h4>
+        <hr />
+      </div>
     </div>
   );
 };
