@@ -16,6 +16,9 @@ const config: Config = {
           disabled: '#B1B2B2', // Disabled text color
           hovered: '#262626', // Hovered text color
         },
+        border: {
+          default: '#C7C3C3', // Default border
+        },
         background: {
           default: '#FAFAFA', // Default background color
           subdued: '#F0F1F2', // Subdued background color
@@ -31,7 +34,6 @@ const config: Config = {
       fontFamily: {
         bricolage: 'var(--bricolage)',
         inconsolata: 'var(--inconsolata)',
-
       },
     },
   },
