@@ -12,6 +12,7 @@ export { default as reactJS } from './global/react.json';
 export { default as checker } from './global/checker.png';
 export { default as candourLogo } from './global/candour.png';
 export { default as sheCodesLogo } from "./global/shecodes.png"
+export {default as console} from "./global/console.png"
 
 // Tsx Icons
 export {default as EmailIcon} from "./icons/EmailIcon"

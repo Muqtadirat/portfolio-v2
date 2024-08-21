@@ -12,7 +12,7 @@ interface HistoryProps {
 const history: HistoryProps[] = [
   {
     role: 'Frontend Developer',
-    company: 'Candour IT services',
+    company: 'Candour IT Services',
     location: 'Lagos, Nigeria',
     period: 'April 2024 - Present',
     logo: candourLogo,
