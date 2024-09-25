@@ -1,4 +1,4 @@
-import { digittallyApp, payritWeb } from "@/assets/asset"
+import { digittallyApp, etchASketch, payritWeb, todoList } from "@/assets/asset"
 import { StaticImageData } from "next/image";
 
 interface ProjectProps {
@@ -12,8 +12,20 @@ const projects: ProjectProps[] = [
     image: payritWeb,
   },
   {
-    title: 'Digit-tally accounting software',
+    title: 'Digit-tally Accounting Software',
     image: digittallyApp,
+  },
+  {
+    title: 'Digit-tally Landing Page',
+    image: digittallyApp,
+  },
+  {
+    title: 'Etch A Sketch',
+    image: etchASketch,
+  },
+  {
+    title: 'To-Do List',
+    image: todoList,
   },
 ];
 

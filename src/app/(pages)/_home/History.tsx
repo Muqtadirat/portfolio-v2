@@ -8,9 +8,9 @@ const WorkHistory = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <div className="mt-24 lg:mt-[12rem]">
-      <h4 className="text-5xl lg:text-[5.5rem] font-bricolage">
-        Work <br /> history
+    <div className="mt-10 lg:mt-[12rem]">
+      <h4 className="text-3xl lg:text-[5.5rem] lg:leading-none font-bricolage">
+        Work <br className='hidden lg:block'/> history
       </h4>
 
       <div className="flex justify-end mt-5 lg:mt-10">

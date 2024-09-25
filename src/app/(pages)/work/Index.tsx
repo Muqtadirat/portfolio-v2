@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import { arrowUpRight } from '@/assets/asset';
 import ProjectDetails from './ProjectDetails';
@@ -15,9 +16,14 @@ const Work = () => {
     setSelectedProject(projectTitle);
   };
 
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
+
+  const visibleProjects = isHomePage ? projects.slice(0, 4) : projects;
+
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-10 lg:mb-[13rem]">
-      {projects.map(({ title, image }) => (
+      {visibleProjects.map(({ title, image }) => (
         <div
           key={title}
           className="space-y-4"

@@ -8,7 +8,7 @@ const Hobbies = () => {
   const [selectedHobby, setSelectedHobby] = useState(hobbies[0]);
 
   return (
-    <div className="my-10 lg:my-[13rem]">
+    <div className="my-8 lg:my-[13rem]">
       <p className="lg:text-xl">
         When I am not writing code, you will find me doing one of these
       </p>
@@ -36,9 +36,9 @@ const Hobbies = () => {
           <Image
             src={selectedHobby.image}
             alt={`${selectedHobby.hobby} image`}
-            width={513}
-            height={416}
-            className="lg:h-[416px] lg:w-[513px] rounded-lg transition-transform duration-500 ease-in-out transform hover:scale-105"
+            // width={513}
+            // height={416}
+            className="h-[300px] lg:h-[416px] lg:w-[513px] rounded-lg transition-transform duration-500 ease-in-out transform hover:scale-105"
           />
         </div>
       </section>

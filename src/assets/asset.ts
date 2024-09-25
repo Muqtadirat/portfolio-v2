@@ -19,6 +19,11 @@ export { default as payritWeb } from './global/payrit-web.png';
 export { default as payritWeb2 } from './global/payrit-web2.png';
 export { default as digittallyApp } from './global/digit-tally app.png';
 export { default as digittallyApp2 } from './global/digit-tally app2.png';
+export {default as etchASketch} from "./global/etch-a-sketch.png"
+export {default as etchASketch2} from "./global/etch-a-sketch2.png"
+export { default as etchASketch3 } from "./global/etch-a-sketch3.png"
+export {default as todoList} from "./global/to-do list.png"
+export {default as todoList2} from "./global/to-do list2.png"
 
 // Tsx Icons
 export { default as EmailIcon } from './icons/EmailIcon';

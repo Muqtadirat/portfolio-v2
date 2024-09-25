@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { arrowDown, arrowUpRight, checker } from '@/assets/asset';
 import WorkHistory from './History';
+import Work from '../work/Index';
 
 const Home = () => {
   return (
@@ -17,23 +18,23 @@ const Home = () => {
           </p>
         </div>
       </div>
-      <header className="mt-6 lg:mt-[3.125rem] flex flex-col lg:flex-row justify-between snap-start">
+      <header className="mt-4 lg:mt-[3.125rem] flex flex-col lg:flex-row justify-between snap-start">
         <div className="lg:space-y-[11.25rem] w-1/2">
           <Image
             src={checker}
             alt="checkered placeholder"
-            width={660}
-            height={278}
-            className="h-[278px] w-[660px]"
+            // width={660}
+            // height={278}
+            className="h-[278px] w-[660px] hidden lg:block"
           />
           <Image src={arrowDown} alt="Down arrow" className="hidden lg:block" />
         </div>
-        <div className="w-1/2 lg:mt-[5.313rem]">
-          <h1 className="font-bricolage text-5xl lg:text-[149px]">
+        <div className="lg:w-1/2 lg:mt-[5.313rem]">
+          <h1 className="font-bricolage text-4xl lg:text-[149px] lg:leading-none">
             Frontend Developer
           </h1>
-          <div className="mt-5 space-y-4">
-            <p className="text-xl">
+          <div className="mt-3 lg:mt-5 space-y-2 lg:space-y-4">
+            <p className="lg:text-xl">
               Right now I build software for the web using Next.js, React &
               Typescript and I am exploring Express Js, Mongoose, Node.js
             </p>
@@ -43,13 +44,13 @@ const Home = () => {
         </div>
       </header>
 
-      <section className="space-y-6 snap-start lg:max-w-[771px] mt-8 lg:mt-12">
-        <p className="text-2xl lg:text-[2rem] font-medium uppercase leading-snug">
+      <section className="space-y-4 lg:space-y-6 snap-start lg:max-w-[771px] mt-3 lg:mt-12">
+        <p className="text-xl lg:text-[2rem] font-medium uppercase leading-snug">
           I have 2 years experience mostly working in small teams & startups
           across fintech & SAAS industries where I applied “pixel perfect”
           principles for aesthetic value and “clean code” architecture.
         </p>
-        <p className="text-xl">
+        <p className="lg:text-xl">
           Passionate about web technologies and building products that
           positively change the way humans do things. I like to create memorable
           experience for human-computer interactions.
@@ -68,6 +69,8 @@ const Home = () => {
         <hr />
         <h4 className="text-3xl lg:text-[9.313rem] font-bricolage">My work</h4>
         <hr />
+
+        <Work/>
       </div>
     </div>
   );

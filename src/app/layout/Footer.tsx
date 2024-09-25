@@ -31,7 +31,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="px-6 lg:px-12 pb-12 pt-8 lg:pb-16 lg:pt-12">
+    <footer id='contact' className="px-6 lg:px-12 pb-12 pt-8 lg:pb-16 lg:pt-12">
       <Form />
 
       <section className="lg:px-[3.75rem] mt-10 lg:mt-32 flex justify-between font-medium lg:text-[2rem] uppercase">
