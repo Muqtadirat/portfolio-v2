@@ -28,7 +28,7 @@ const InputField: React.FC<InputFieldProps> = ({
         value={value}
         onChange={onChange}
         disabled={disabled}
-        className="w-full p-2 lg:p-3 border-b-2 border-border-default transition-colors duration-700 ease-in-out focus:outline-none focus:border-black placeholder:text-text-subdued"
+        className="w-full p-2 bg-transparent lg:p-3 border-b-2 border-border-default transition-colors duration-700 ease-in-out focus:outline-none focus:border-black placeholder:text-text-subdued"
       />
     </div>
   );

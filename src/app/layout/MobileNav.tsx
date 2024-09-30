@@ -4,8 +4,9 @@ import { logo } from '@/assets/asset';
 import Image from 'next/image';
 import React, { useState } from 'react';
 import navLinks from './navLinks';
-import Link from 'next/link';
 import Hamburger from 'hamburger-react';
+import { useRouter } from 'next/navigation';
+import { motion } from 'framer-motion';
 
 interface MobileNavProps {
   pathname: string;
@@ -13,6 +14,12 @@ interface MobileNavProps {
 
 const MobileNav: React.FC<MobileNavProps> = ({ pathname }) => {
   const [showMenu, setShowMenu] = useState(false);
+  const router = useRouter();
+
+  const handleLinkClick = (href: string) => {
+    setShowMenu(false);
+    router.push(href);
+  };
 
   return (
     <nav className="block lg:hidden fixed top-0 z-50 left-1/2 transform -translate-x-1/2 w-full max-w-[1232px] px-4 py-3 rounded bg-background-default">
@@ -29,19 +36,25 @@ const MobileNav: React.FC<MobileNavProps> = ({ pathname }) => {
           label="Show menu"
         />
 
-        {showMenu && (
-          <ul className="lg:hidden absolute top-12 left-0 right-0 py-6 px-4 h-screen bg-background-default space-y-10 [&>*]:block text-sm text-default font-semibold z-50">
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: showMenu ? 1 : 0, y: showMenu ? 0 : -20 }}
+          transition={{ duration: 0.4 }}
+          className="absolute top-12 left-0 right-0 py-6 px-4 h-screen bg-background-default text-sm text-default font-semibold z-50"
+          style={{ pointerEvents: showMenu ? 'auto' : 'none' }}
+        >
+          <ul className="space-y-10">
             {navLinks.map(({ title, href }) => (
-              <Link
-                key={title}
-                href={href}
-                className={`hover:underline underline-offset-4 transition-all duration-500 ease-in-out ${pathname === href ? 'underline hover:no-underline' : 'no-underline'}`}
-              >
-                <li>{title}</li>
-              </Link>
+              <li key={title} onClick={() => handleLinkClick(href)}>
+                <span
+                  className={`hover:underline underline-offset-4 transition-all duration-500 ease-in-out cursor-pointer ${pathname === href ? 'underline hover:no-underline' : 'no-underline'}`}
+                >
+                  {title}
+                </span>
+              </li>
             ))}
           </ul>
-        )}
+        </motion.div>
       </div>
     </nav>
   );

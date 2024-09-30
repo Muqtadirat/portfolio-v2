@@ -2,7 +2,19 @@ import React from 'react';
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { arrowDown, arrowUpRight, checker } from '@/assets/asset';
+import {
+  arrowDown,
+  arrowUpRight,
+  checker,
+  cssIcon,
+  cypressIcon,
+  htmlIcon,
+  nextJsIcon,
+  reactIcon,
+  reactQueryIcon,
+  reduxIcon,
+  tailwindIcon,
+} from '@/assets/asset';
 import WorkHistory from './History';
 import Work from '../work/Index';
 
@@ -33,18 +45,27 @@ const Home = () => {
           <h1 className="font-bricolage text-4xl lg:text-[149px] lg:leading-none">
             Frontend Developer
           </h1>
-          <div className="mt-3 lg:mt-5 space-y-2 lg:space-y-4">
+          <div className="mt-3 lg:mt-5 space-y-4">
             <p className="lg:text-xl">
               Right now I build software for the web using Next.js, React &
               Typescript and I am exploring Express Js, Mongoose, Node.js
             </p>
             {/* icons*/}
-            <div></div>
+            <div className="flex gap-2 lg:gap-4">
+              <Image src={htmlIcon} alt="HTML" />
+              <Image src={reactIcon} alt="React" />
+              <Image src={nextJsIcon} alt="Next Js" />
+              <Image src={cssIcon} alt="CSS3" />
+              <Image src={tailwindIcon} alt="Tailwind" />
+              <Image src={reduxIcon} alt="Redux" />
+              <Image src={reactQueryIcon} alt="React query" />
+              <Image src={cypressIcon} alt="Cypress" />
+            </div>
           </div>
         </div>
       </header>
 
-      <section className="space-y-4 lg:space-y-6 snap-start lg:max-w-[771px] mt-3 lg:mt-12">
+      <section className="space-y-4 lg:space-y-6 snap-start lg:max-w-[771px] mt-4 lg:mt-12">
         <p className="text-xl lg:text-[2rem] font-medium uppercase leading-snug">
           I have 2 years experience mostly working in small teams & startups
           across fintech & SAAS industries where I applied “pixel perfect”
@@ -70,7 +91,7 @@ const Home = () => {
         <h4 className="text-3xl lg:text-[9.313rem] font-bricolage">My work</h4>
         <hr />
 
-        <Work/>
+        <Work />
       </div>
     </div>
   );

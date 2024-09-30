@@ -58,7 +58,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
               Close
             </p>
           </div>
-          <div className="grid lg:grid-cols-2 gap-6 mt-10 lg:mt-[6.25rem]">
+          <div className="grid lg:grid-cols-2 gap-6 font-inconsolata mt-10 lg:mt-[6.25rem]">
             <div className="flex flex-col justify-between">
               <p className="mb-4 text-base lg:text-[2rem] font-medium leading-normal uppercase">
                 {project.description}
@@ -111,6 +111,18 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                     </button>
                   </div>
                 )}
+              </div>
+              <div>
+                <p className="lg:text-lg">Tech Stack:</p>
+                <div className="flex gap-2 lg:gap-4 mt-2">
+                  {project.stack.map((icon, index) => (
+                    <Image
+                      key={index}
+                      src={icon}
+                      alt={`Tech stack icon ${index + 1}`}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
           </div>

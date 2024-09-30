@@ -1,4 +1,4 @@
-import { digittallyApp, etchASketch, payritWeb, todoList } from "@/assets/asset"
+import { digittallyApp, digittallyPage, etchASketch, payritWeb, todoList } from "@/assets/asset"
 import { StaticImageData } from "next/image";
 
 interface ProjectProps {
@@ -17,7 +17,7 @@ const projects: ProjectProps[] = [
   },
   {
     title: 'Digit-tally Landing Page',
-    image: digittallyApp,
+    image: digittallyPage,
   },
   {
     title: 'Etch A Sketch',
