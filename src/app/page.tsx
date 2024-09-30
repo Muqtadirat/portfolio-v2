@@ -1,4 +1,9 @@
-import Home from "./_home/Home";
+import Home from "./(pages)/_home/Index";
+
+export const metadata: { title: string } = {
+  title: 'Muqtadirat Yussuff | Frontend Developer',
+};
+
 
 const HomePage = () => {
   return <Home />;
