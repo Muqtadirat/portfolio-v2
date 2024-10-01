@@ -22,7 +22,7 @@ const Work = () => {
   const visibleProjects = isHomePage ? projects.slice(0, 4) : projects;
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-10 lg:mb-[13rem]">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 mb-10 lg:mb-[13rem]">
       {visibleProjects.map(({ title, image }) => (
         <div
           key={title}

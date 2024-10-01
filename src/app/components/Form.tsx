@@ -1,26 +1,78 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 import InputField from './InputField';
+import emailjs from '@emailjs/browser';
+import { toast } from 'sonner';
 
 const Form = () => {
-  const [name, setName] = useState<string>('');
-  const [note, setNote] = useState<string>('');
+  const form = useRef<HTMLFormElement | null>(null);
+  const [formData, setFormData] = useState({
+    name: '',
+    note: '',
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const parameters = {
+      name: formData.name,
+      note: formData.note,
+      to_name: 'Muqtadirat',
+    };
+
+    emailjs
+      .send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        parameters,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
+        
+      )
+      .then(
+        () => {
+          toast.success('Thank you for reaching out!');
+
+          setTimeout(() => {
+            setFormData({
+              name: '',
+              note: '',
+            });
+            if (form.current) {
+              form.current.submit();
+            }
+          }, 4000);
+        },
+        () => {
+          toast.error('Email failed to send');
+        },
+      )
+      .catch((error: string) => console.log(error));
+  };
 
   return (
     <div className="max-w-[1000px] mx-auto">
-      <p className="mx-auto text-center text-3xl lg:text-[5.5rem] max-w-xs lg:max-w-full lg:leading-[100px] font-bricolage mb-9 lg:mb-14">
+      <p className="mx-auto text-center text-3xl lg:text-[5.5rem] max-w-xs lg:max-w-full lg:leading-[100px] font-bricolage mb-9 mt-10 lg:mb-14">
         Talk to me about a project and let’s do great work
       </p>
-      <form action="" className="space-y-6 lg:space-y-8">
+
+      <form ref={form} onSubmit={sendEmail} className="space-y-6 lg:space-y-8">
         <div>
           <InputField
             type="text"
             name="name"
             label="Name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            value={formData.name}
+            onChange={handleInputChange}
             placeholder="e.g Takezi Kensei Akinola"
           />
         </div>
@@ -29,8 +81,8 @@ const Form = () => {
             type="text"
             name="note"
             label="Additional note"
-            value={note}
-            onChange={(e) => setNote(e.target.value)}
+            value={formData.note}
+            onChange={handleInputChange}
             placeholder="I'd like to speak to you about..."
           />
         </div>

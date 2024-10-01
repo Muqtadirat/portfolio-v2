@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { roboto, bricolage_grotesque, inconsolata } from '@/assets/fonts';
 import './globals.css';
 import Layout from './layout/Index';
+import { Toaster } from 'sonner';
 
 export const metadata: Metadata = {
   title: 'Muqtadirat Yussuff | Frontend Developer',
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body
         className={`${roboto.className} ${bricolage_grotesque.variable} ${inconsolata.variable}`}
       >
+        <Toaster position="top-center" richColors closeButton />
         <Layout>{children}</Layout>
       </body>
     </html>
