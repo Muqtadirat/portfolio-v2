@@ -14,6 +14,7 @@ import {
   nextJsColored,
   payritWeb,
   payritWeb2,
+  payritWeb3,
   reactQueryColored,
   reduxColored,
   tailwindColored,
@@ -36,9 +37,9 @@ interface ProjectDetailsProps {
 const projectDetails: ProjectDetailsProps[] = [
   {
     title: 'Payrit Website',
-    year: '2023',
+    year: '2024',
     link: 'https://www.payrit.com/',
-    image: [payritWeb, payritWeb2],
+    image: [payritWeb, payritWeb2, payritWeb3],
     description:
       'Payrit is a payment service that offers the fastest, safest, and most complete personal and business financial services.',
     role: 'I worked as the sole frontend developer using Next.js, Typescript, and Tanstack Query.',
@@ -68,8 +69,14 @@ const projectDetails: ProjectDetailsProps[] = [
     image: [digittallyPage, digittallyPage2, digittallyPage3],
     description:
       'The landing page for Digit-tally, an accounting software that helps businesses manage invoices, receipts, credit notes, sales, and taxes.',
-    role: 'I collaborated with a team of 2 frontend engineers to build the landing page using Next.js, JavaScript, and Tailwind CSS.',
-    stack: [javacriptColored, tailwindColored, nextJsColored],
+    role: 'I collaborated with a team of 2 frontend engineers to build the landing page using Next.js, TypeScript, and Tailwind CSS.',
+    stack: [
+      typescriptColored,
+      tailwindColored,
+      reactQueryColored,
+      reduxColored,
+      nextJsColored,
+    ],
   },
   {
     title: 'Etch A Sketch',

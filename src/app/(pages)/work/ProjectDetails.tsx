@@ -91,6 +91,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                     src={project.image[currentImageIndex]}
                     alt={`${project.title} image ${currentImageIndex + 1}`}
                     className="rounded-2xl object-contain h-full"
+                    priority
                     // layout="fill"
                   />
                 </motion.div>

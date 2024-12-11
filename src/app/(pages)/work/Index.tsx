@@ -39,6 +39,7 @@ const Work = () => {
               alt={title}
               className="rounded-2xl object-cover"
               layout="fill"
+              priority
             />
           </div>
         </div>
