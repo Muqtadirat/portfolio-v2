@@ -18,7 +18,7 @@ const history: HistoryProps[] = [
     logo: candourLogo,
   },
   {
-    role: 'Junior Frontend Developer',
+    role: 'Frontend Developer',
     company: 'Payrit',
     location: 'Lagos, Nigeria',
     period: 'Dec 2023 - Present',
