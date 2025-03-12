@@ -48,7 +48,7 @@ const projectDetails: ProjectDetailsProps[] = [
   {
     title: 'Digit-tally Accounting Software',
     year: '2024',
-    link: 'https://app.digit-tally.io/',
+    link: 'https://stgsvr.digit-tally.io/',
     image: [digittallyApp, digittallyApp2],
     description:
       'Digit-tally is an accounting software for small, medium, and large enterprises. It allows businesses to manage invoices, receipts, credit notes, sales, and taxes.',
@@ -65,7 +65,7 @@ const projectDetails: ProjectDetailsProps[] = [
   {
     title: 'Digit-tally Landing Page',
     year: '2024',
-    link: 'https://digit-tally-landing-page.vercel.app/',
+    link: 'https://stgsvr008.digit-tally.io/',
     image: [digittallyPage, digittallyPage2, digittallyPage3],
     description:
       'The landing page for Digit-tally, an accounting software that helps businesses manage invoices, receipts, credit notes, sales, and taxes.',
