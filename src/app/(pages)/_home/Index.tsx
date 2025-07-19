@@ -14,7 +14,7 @@ import {
   reactQueryIcon,
   reduxIcon,
   tailwindIcon,
-} from '@/assets/asset';
+} from '@/assets';
 import WorkHistory from './History';
 import Work from '../work/Index';
 
@@ -30,8 +30,8 @@ const Home = () => {
           </p>
         </div>
       </div>
-      <header className="mt-4 lg:mt-[3.125rem] flex flex-col lg:flex-row justify-between snap-start">
-        <div className="lg:space-y-[11.25rem] w-1/2">
+      <header className="mt-4 lg:mt-12.5 flex flex-col lg:flex-row justify-between snap-start">
+        <div className="lg:space-y-45 w-1/2">
           <Image
             src={checker}
             alt="checkered placeholder"
@@ -86,7 +86,7 @@ const Home = () => {
       </section>
 
       <WorkHistory />
-      <div className="mt-6 lg:mt-[5.5rem] space-y-2 lg:space-y-14">
+      <div className="mt-6 lg:mt-22 space-y-2 lg:space-y-14">
         <hr />
         <h4 className="text-3xl lg:text-[9.313rem] font-bricolage">My work</h4>
         <hr />

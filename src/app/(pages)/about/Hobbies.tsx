@@ -8,7 +8,7 @@ const Hobbies = () => {
   const [selectedHobby, setSelectedHobby] = useState(hobbies[0]);
 
   return (
-    <div className="my-8 lg:my-[13rem]">
+    <div className="my-8 lg:my-52">
       <p className="lg:text-xl">
         When I am not writing code, you will find me doing one of these
       </p>

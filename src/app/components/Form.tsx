@@ -89,7 +89,7 @@ const Form = () => {
 
         <button
           type="submit"
-          className="mt-6 lg:mt-10 py-3 px-4 rounded-lg bg-[#0A0A0A] text-white hover:bg-white hover:text-text-default hover:outline outline-2 outline-black font-semibold transition-all duration-500 ease-in-out"
+          className="mt-6 lg:mt-10 py-3 px-4 rounded-lg bg-[#0A0A0A] text-white hover:bg-white hover:text-text-default hover:outline-solid outline-2 outline-black font-semibold transition-all duration-500 ease-in-out"
         >
           Send message
         </button>

@@ -1,6 +1,6 @@
 'use client';
 
-import { logo } from '@/assets/asset';
+import { logo } from '@/assets';
 import Image from 'next/image';
 import React, { useState } from 'react';
 import navLinks from './navLinks';
@@ -22,7 +22,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ pathname }) => {
   };
 
   return (
-    <nav className="block lg:hidden fixed top-0 z-50 left-1/2 transform -translate-x-1/2 w-full max-w-[1232px] px-4 py-3 rounded bg-background-default">
+    <nav className="block lg:hidden fixed top-0 z-50 left-1/2 transform -translate-x-1/2 w-full max-w-[1232px] px-4 py-3 rounded-sm bg-background-default">
       <div className="flex justify-between items-center">
         <Image src={logo} alt="Muqtadirat" />
 

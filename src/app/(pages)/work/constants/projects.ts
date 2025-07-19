@@ -1,5 +1,12 @@
-import { digittallyApp, digittallyPage, etchASketch, payritWeb, todoList } from "@/assets/asset"
-import { StaticImageData } from "next/image";
+import {
+  digittallyApp,
+  digittallyPage,
+  etchASketch,
+  giriWeb1,
+  payritWeb,
+  todoList,
+} from '@/assets';
+import { StaticImageData } from 'next/image';
 
 interface ProjectProps {
   title: string;
@@ -16,6 +23,10 @@ const projects: ProjectProps[] = [
     image: digittallyApp,
   },
   {
+    title: 'GiriToday Landing Page',
+    image: giriWeb1,
+  },
+  {
     title: 'Digit-tally Landing Page',
     image: digittallyPage,
   },
@@ -29,5 +40,4 @@ const projects: ProjectProps[] = [
   },
 ];
 
-
-export default projects
+export default projects;

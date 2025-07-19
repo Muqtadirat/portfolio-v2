@@ -1,4 +1,4 @@
-import { checker } from '@/assets/asset';
+import { checker } from '@/assets';
 import Image from 'next/image';
 import React from 'react';
 import Hobbies from './Hobbies';

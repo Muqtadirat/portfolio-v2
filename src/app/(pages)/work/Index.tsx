@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
-import { arrowUpRight } from '@/assets/asset';
+import { arrowUpRight } from '@/assets';
 import ProjectDetails from './ProjectDetails';
 import projects from './constants/projects';
 
@@ -22,7 +22,7 @@ const Work = () => {
   const visibleProjects = isHomePage ? projects.slice(0, 4) : projects;
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 mb-10 lg:mb-[13rem]">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 mb-10 lg:mb-52">
       {visibleProjects.map(({ title, image }) => (
         <div
           key={title}

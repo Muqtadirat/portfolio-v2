@@ -17,7 +17,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     <>
       <DesktopNav pathname={pathname} />
       <MobileNav pathname={pathname} />
-      <main className="px-4 pt-6 mt-12 lg:mt-[5.875rem] max-w-[1432px] mx-auto w-full">
+      <main className="px-4 pt-6 mt-12 lg:mt-23.5 max-w-[1432px] mx-auto w-full">
         {children}
       </main>
       <Footer />

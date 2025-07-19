@@ -1,5 +1,5 @@
 import { StaticImageData } from 'next/image';
-import { checker, console } from '@/assets/asset';
+import { checker, console } from '@/assets';
 
 interface HobbiesProps {
   hobby: string;

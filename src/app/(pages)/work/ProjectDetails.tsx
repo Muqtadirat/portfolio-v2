@@ -5,7 +5,7 @@ import Image from 'next/image';
 import projectDetails from './constants/projectDetails';
 import Link from 'next/link';
 import { useState } from 'react';
-import { arrowLeft, arrowRight } from '@/assets/asset';
+import { arrowLeft, arrowRight } from '@/assets';
 
 interface ProjectDetailsProps {
   isOpen: boolean;
@@ -58,7 +58,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
               Close
             </p>
           </div>
-          <div className="grid lg:grid-cols-2 gap-6 font-inconsolata mt-10 lg:mt-[6.25rem]">
+          <div className="grid lg:grid-cols-2 gap-6 font-inconsolata mt-10 lg:mt-25">
             <div className="flex flex-col justify-between">
               <p className="mb-4 text-base lg:text-[2rem] font-medium leading-normal uppercase">
                 {project.description}
