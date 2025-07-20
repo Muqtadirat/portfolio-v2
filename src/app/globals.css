@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
 @import 'tailwindcss';
 
 @theme {
@@ -17,8 +20,10 @@
   --color-surface-disabled: #fafafa;
   --color-surface-icon: #141414;
 
-  /* --font-bricolage: var(--bricolage);
-  --font-inconsolata: var(--inconsolata); */
+  --font-roboto: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-bricolage: 'Bricolage Grotesque', 'Helvetica Neue', Helvetica, Arial,
+    sans-serif;
+  --font-inconsolata: 'Inconsolata', 'Courier New', Courier, monospace;
 }
 
 /*

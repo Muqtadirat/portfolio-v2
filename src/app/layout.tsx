@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import { roboto, bricolage_grotesque, inconsolata } from '@/assets/fonts';
 import './globals.css';
 import Layout from './layout/Index';
 import { Toaster } from 'sonner';
@@ -21,7 +20,7 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="32x32" href="/logo.svg" />
       </head>
       <body
-        className={`${roboto.className} ${bricolage_grotesque.variable} ${inconsolata.variable}`}
+        className={`font-roboto`}
       >
         <Toaster position="top-center" richColors closeButton />
         <Layout>{children}</Layout>
