@@ -14,6 +14,10 @@ import {
   etchASketch,
   etchASketch2,
   etchASketch3,
+  giriStore1,
+  giriStore2,
+  giriStore3,
+  giriStore4,
   giriWeb1,
   giriWeb2,
   giriWeb3,
@@ -27,6 +31,14 @@ import {
   reactQueryColored,
   reduxColored,
   tailwindColored,
+  timesheet1,
+  timesheet2,
+  timesheet3,
+  timesheet4,
+  timesheet5,
+  timesheet6,
+  timesheet7,
+  timesheet8,
   todoList,
   todoList2,
   typescriptColored,
@@ -36,11 +48,12 @@ import { StaticImageData } from 'next/image';
 interface ProjectDetailsProps {
   role: string;
   year: string;
-  link: string;
+  link?: string;
   title: string;
   description: string;
   image: StaticImageData[];
   stack: StaticImageData[];
+  noLink?: boolean;
 }
 
 const projectDetails: ProjectDetailsProps[] = [
@@ -80,6 +93,22 @@ const projectDetails: ProjectDetailsProps[] = [
     ],
   },
   {
+    title: 'GiriToday Storefront',
+    year: '2025 - Present',
+    link: 'https://shop.giritoday.com/',
+    image: [giriStore1, giriStore2, giriStore3, giriStore4],
+    description:
+      'Storefront for GiriToday, an African e-commerce platform connecting global buyers with local African sellers. It aims to bridge the gap between local artisans and the global market.',
+    role: 'I worked in a team of two to develop the storefront using Next.js, TypeScript, and Tailwind CSS.',
+    stack: [
+      typescriptColored,
+      tailwindColored,
+      reduxColored,
+      reactQueryColored,
+      nextJsColored,
+    ],
+  },
+  {
     title: 'GiriToday Landing Page',
     year: '2025 - Present',
     link: 'https://www.giritoday.com/',
@@ -106,10 +135,35 @@ const projectDetails: ProjectDetailsProps[] = [
       typescriptColored,
       tailwindColored,
       reactQueryColored,
-      reduxColored,
       nextJsColored,
     ],
   },
+  {
+    title: 'Digit-tally Timesheet',
+    year: '2025',
+    image: [
+      timesheet1,
+      timesheet2,
+      timesheet3,
+      timesheet4,
+      timesheet5,
+      timesheet6,
+      timesheet7,
+      timesheet8,
+    ],
+    description:
+      'A timesheet web app for tracking and managing employee work hours. Built for Digit-tally to help teams log time, monitor attendance, and streamline reporting for payroll and productivity.',
+    role: 'I collaborated with a team of 3 frontend engineers to build the landing page using Next.js, TypeScript, and Tailwind CSS.',
+    stack: [
+      typescriptColored,
+      tailwindColored,
+      reactQueryColored,
+      reduxColored,
+      nextJsColored,
+    ],
+    noLink: true,
+  },
+
   {
     title: 'Etch A Sketch',
     year: '2023',

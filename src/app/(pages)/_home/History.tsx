@@ -9,7 +9,7 @@ const WorkHistory = () => {
 
   return (
     <div className="mt-10 lg:mt-48">
-      <h4 className="text-3xl lg:text-[5.5rem] lg:leading-none font-bricolage">
+      <h4 className="text-3xl lg:text-[5.5rem] lg:leading-none font-bricolage font-extrabold">
         Work <br className='hidden lg:block'/> history
       </h4>
 

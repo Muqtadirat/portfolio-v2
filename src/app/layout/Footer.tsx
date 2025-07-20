@@ -34,7 +34,7 @@ const Footer = () => {
     <footer id="contact" className="px-6 lg:px-12 pb-12 pt-8 lg:pb-16 lg:pt-12">
       <Form />
 
-      <section className="lg:px-15 mt-10 lg:mt-32 flex justify-between font-medium lg:text-[2rem] uppercase">
+      <section className="lg:px-15 mt-10 lg:mt-32 flex justify-between lg:text-[2rem] uppercase">
         <h4>Muqtadirat Yussuff</h4>
         <h4>Frontend Developer</h4>
         <div className="flex gap-5 items-center">

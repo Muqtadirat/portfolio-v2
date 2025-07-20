@@ -7,7 +7,7 @@ const About = () => {
   return (
     <>
       <div className="flex flex-col justify-center items-center gap-4 lg:gap-10">
-        <h1 className="font-bricolage text-3xl lg:text-[149px] lg:leading-none max-w-[800px]">
+        <h1 className="font-bricolage font-extrabold text-3xl lg:text-[149px] lg:leading-none max-w-[800px]">
           Passionate Frontend Developer
         </h1>
 

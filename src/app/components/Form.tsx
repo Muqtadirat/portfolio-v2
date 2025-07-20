@@ -61,7 +61,7 @@ const Form = () => {
 
   return (
     <div className="max-w-[1000px] mx-auto">
-      <p className="mx-auto text-center text-3xl lg:text-[5.5rem] max-w-xs lg:max-w-full lg:leading-[100px] font-bricolage mb-9 mt-10 lg:mb-14">
+      <p className="mx-auto text-center text-3xl lg:text-[5.5rem] max-w-xs lg:max-w-full lg:leading-[100px] font-bricolage font-extrabold mb-9 mt-10 lg:mb-14">
         Talk to me about a project and let’s do great work
       </p>
 

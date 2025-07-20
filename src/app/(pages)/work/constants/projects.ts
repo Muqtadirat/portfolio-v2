@@ -2,8 +2,10 @@ import {
   digittallyApp,
   digittallyPage,
   etchASketch,
+  giriStore1,
   giriWeb1,
   payritWeb,
+  timesheet1,
   todoList,
 } from '@/assets';
 import { StaticImageData } from 'next/image';
@@ -23,8 +25,16 @@ const projects: ProjectProps[] = [
     image: digittallyApp,
   },
   {
+    title: 'GiriToday Storefront',
+    image: giriStore1,
+  },
+  {
     title: 'GiriToday Landing Page',
     image: giriWeb1,
+  },
+  {
+    title: 'Digit-tally Timesheet',
+    image: timesheet1,
   },
   {
     title: 'Digit-tally Landing Page',

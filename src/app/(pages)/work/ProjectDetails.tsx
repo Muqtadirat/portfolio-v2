@@ -48,7 +48,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
           transition={{ duration: 0.5 }}
           className="fixed inset-0 z-50 bg-black text-white py-6 lg:py-8 px-6 lg:px-12 h-screen rounded-t-3xl"
         >
-          <div className="flex items-center justify-between font-bricolage lg:text-[2rem]">
+          <div className="flex items-center justify-between font-bricolage font-extrabold lg:text-[2rem]">
             <p>{project.title}</p>
             <p>{project.year}</p>
             <p
@@ -69,13 +69,19 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                 </h3>
                 <p className="text-sm lg:text-base">{project.role}</p>
               </div>
-              <Link
-                href={project.link}
-                target="_blank"
-                className="text-sm mt-6 lg:mt-10 hover:text-white/40 transition-colors duration-300 ease-out"
-              >
-                Visit live link
-              </Link>
+              {project.noLink ? (
+                <p className="text-sm mt-6 lg:mt-10 text-white/60 italic">
+                  Still in development
+                </p>
+              ) : (
+                <Link
+                  href={project.link || ''}
+                  target="_blank"
+                  className="text-sm mt-6 lg:mt-10 hover:text-white/40 transition-colors duration-300 ease-out"
+                >
+                  Visit live link
+                </Link>
+              )}
             </div>
             <div className="relative w-full h-[300px] lg:h-[400px]">
               <div className="relative w-full h-full overflow-hidden">

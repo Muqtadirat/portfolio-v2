@@ -1,12 +1,9 @@
-
-
 // Icons
 export { default as cssIcon } from './svg/css.svg';
 export { default as htmlIcon } from './svg/html.svg';
 export { default as reduxIcon } from './svg/redux.svg';
 export { default as reactIcon } from './svg/react.svg';
 export { default as cypressIcon } from './svg/cypress.svg';
-;
 export { default as tailwindIcon } from './svg/tailwind.svg';
 export { default as arrowDown } from './svg/arrow-down.svg';
 export { default as arrowLeft } from './svg/arrow-left.svg';
@@ -29,15 +26,10 @@ export { default as typescriptColored } from './svg/typescript-color.svg';
 export { default as javacriptColored } from './svg/javascript-color.svg';
 export { default as reactQueryColored } from './svg/reactquery-color.svg';
 
-// Animations
-export { default as reactJS } from './global/react.json';
-
-// PNGs
-
-
 // Tsx Icons
 export { default as EmailIcon } from './icons/EmailIcon';
 export { default as GithubIcon } from './icons/GithubIcon';
 export { default as LinkedinIcon } from './icons/LinkedinIcon';
 
 export * from './global';
+export * from './animation';
