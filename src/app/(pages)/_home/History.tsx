@@ -28,7 +28,7 @@ const WorkHistory = () => {
                   {logo && <Image src={logo} alt="" width={72} height={72} />}
                 </div>
                 <div className="space-y-1">
-                  <p className="text-2xl lg:text-[2rem] font-bricolage">
+                  <p className="text-2xl lg:text-[2rem] font-bricolage font-extrabold">
                     {role}
                   </p>
                   <p className="text-text-secondary">
