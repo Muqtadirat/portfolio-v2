@@ -3,12 +3,25 @@ import {
   cypressColored,
   digittallyApp,
   digittallyApp2,
+  digittallyApp3,
+  digittallyApp4,
+  digittallyApp5,
+  digittallyApp6,
+  digittallyApp7,
   digittallyPage,
   digittallyPage2,
   digittallyPage3,
   etchASketch,
   etchASketch2,
   etchASketch3,
+  giriStore1,
+  giriStore2,
+  giriStore3,
+  giriStore4,
+  giriWeb1,
+  giriWeb2,
+  giriWeb3,
+  giriWeb4,
   htmlColored,
   javacriptColored,
   nextJsColored,
@@ -18,20 +31,29 @@ import {
   reactQueryColored,
   reduxColored,
   tailwindColored,
+  timesheet1,
+  timesheet2,
+  timesheet3,
+  timesheet4,
+  timesheet5,
+  timesheet6,
+  timesheet7,
+  timesheet8,
   todoList,
   todoList2,
   typescriptColored,
-} from '@/assets/asset';
+} from '@/assets';
 import { StaticImageData } from 'next/image';
 
 interface ProjectDetailsProps {
   role: string;
   year: string;
-  link: string;
+  link?: string;
   title: string;
   description: string;
   image: StaticImageData[];
   stack: StaticImageData[];
+  noLink?: boolean;
 }
 
 const projectDetails: ProjectDetailsProps[] = [
@@ -47,9 +69,17 @@ const projectDetails: ProjectDetailsProps[] = [
   },
   {
     title: 'Digit-tally Accounting Software',
-    year: '2024',
+    year: '2024 - Present',
     link: 'https://stgsvr.digit-tally.io/',
-    image: [digittallyApp, digittallyApp2],
+    image: [
+      digittallyApp,
+      digittallyApp2,
+      digittallyApp3,
+      digittallyApp4,
+      digittallyApp5,
+      digittallyApp6,
+      digittallyApp7,
+    ],
     description:
       'Digit-tally is an accounting software for small, medium, and large enterprises. It allows businesses to manage invoices, receipts, credit notes, sales, and taxes.',
     role: 'I worked as a frontend engineer in a team of 3, focusing on the internal dashboard. I collaborated with the product design team, using Next.js, Typescript, and Tanstack Query.',
@@ -63,8 +93,39 @@ const projectDetails: ProjectDetailsProps[] = [
     ],
   },
   {
+    title: 'GiriToday Storefront',
+    year: '2025 - Present',
+    link: 'https://shop.giritoday.com/',
+    image: [giriStore1, giriStore2, giriStore3, giriStore4],
+    description:
+      'Storefront for GiriToday, an African e-commerce platform connecting global buyers with local African sellers. It aims to bridge the gap between local artisans and the global market.',
+    role: 'I worked in a team of two to develop the storefront using Next.js, TypeScript, and Tailwind CSS.',
+    stack: [
+      typescriptColored,
+      tailwindColored,
+      reduxColored,
+      reactQueryColored,
+      nextJsColored,
+    ],
+  },
+  {
+    title: 'GiriToday Landing Page',
+    year: '2025 - Present',
+    link: 'https://www.giritoday.com/',
+    image: [giriWeb1, giriWeb2, giriWeb3, giriWeb4],
+    description:
+      'Landing page for GiriToday, an African E-Commerce Platform connecting global buyers with local African seller aiming to bridge the gap between local African artisans and the global market.',
+    role: 'Independently developed the landing page using Next.js, TypeScript, and Tailwind CSS.',
+    stack: [
+      typescriptColored,
+      tailwindColored,
+      reactQueryColored,
+      nextJsColored,
+    ],
+  },
+  {
     title: 'Digit-tally Landing Page',
-    year: '2024',
+    year: '2024 - Present',
     link: 'https://stgsvr008.digit-tally.io/',
     image: [digittallyPage, digittallyPage2, digittallyPage3],
     description:
@@ -74,10 +135,35 @@ const projectDetails: ProjectDetailsProps[] = [
       typescriptColored,
       tailwindColored,
       reactQueryColored,
-      reduxColored,
       nextJsColored,
     ],
   },
+  {
+    title: 'Digit-tally Timesheet',
+    year: '2025',
+    image: [
+      timesheet1,
+      timesheet2,
+      timesheet3,
+      timesheet4,
+      timesheet5,
+      timesheet6,
+      timesheet7,
+      timesheet8,
+    ],
+    description:
+      'A timesheet web app for tracking and managing employee work hours. Built for Digit-tally to help teams log time, monitor attendance, and streamline reporting for payroll and productivity.',
+    role: 'I collaborated with a team of 3 frontend engineers to build the landing page using Next.js, TypeScript, and Tailwind CSS.',
+    stack: [
+      typescriptColored,
+      tailwindColored,
+      reactQueryColored,
+      reduxColored,
+      nextJsColored,
+    ],
+    noLink: true,
+  },
+
   {
     title: 'Etch A Sketch',
     year: '2023',

@@ -1,5 +1,5 @@
 // import { StaticImageData } from 'next/image';
-import { candourLogo, payritLogo, sheCodesLogo } from '@/assets/asset';
+import { candourLogo, giriLogo, payritLogo, sheCodesLogo } from '@/assets';
 
 interface HistoryProps {
   role: string;
@@ -11,6 +11,20 @@ interface HistoryProps {
 
 const history: HistoryProps[] = [
   {
+    role: 'Lead Frontend Developer',
+    company: 'Payrit',
+    location: 'Lagos, Nigeria',
+    period: 'Dec 2023 - Present',
+    logo: payritLogo,
+  },
+  {
+    role: 'Frontend Developer',
+    company: 'GiriToday',
+    location: 'Remote, United States',
+    period: 'January 2025 - Present',
+    logo: giriLogo,
+  },
+  {
     role: 'Frontend Developer',
     company: 'Candour IT Services',
     location: 'Lagos, Nigeria',
@@ -19,13 +33,6 @@ const history: HistoryProps[] = [
   },
   {
     role: 'Frontend Developer',
-    company: 'Payrit',
-    location: 'Lagos, Nigeria',
-    period: 'Dec 2023 - Present',
-    logo: payritLogo,
-  },
-  {
-    role: 'Frontend Intern',
     company: 'SheCodes',
     location: 'Remote',
     period: '2023',

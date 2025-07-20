@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 
 import Image from 'next/image';
@@ -11,12 +13,14 @@ import {
   htmlIcon,
   nextJsIcon,
   reactIcon,
+  // reactJS,
   reactQueryIcon,
   reduxIcon,
   tailwindIcon,
-} from '@/assets/asset';
+} from '@/assets';
 import WorkHistory from './History';
 import Work from '../work/Index';
+// import Lottie from 'lottie-react';
 
 const Home = () => {
   return (
@@ -30,8 +34,8 @@ const Home = () => {
           </p>
         </div>
       </div>
-      <header className="mt-4 lg:mt-[3.125rem] flex flex-col lg:flex-row justify-between snap-start">
-        <div className="lg:space-y-[11.25rem] w-1/2">
+      <header className="mt-4 lg:mt-12.5 flex flex-col lg:flex-row justify-between snap-start">
+        <div className="lg:space-y-45 w-1/2">
           <Image
             src={checker}
             alt="checkered placeholder"
@@ -42,7 +46,7 @@ const Home = () => {
           <Image src={arrowDown} alt="Down arrow" className="hidden lg:block" />
         </div>
         <div className="lg:w-1/2 lg:mt-[5.313rem]">
-          <h1 className="font-bricolage text-4xl lg:text-[149px] lg:leading-none">
+          <h1 className="font-bricolage font-extrabold text-4xl lg:text-[149px] lg:leading-none">
             Frontend Developer
           </h1>
           <div className="mt-3 lg:mt-5 space-y-4">
@@ -53,6 +57,12 @@ const Home = () => {
             {/* icons*/}
             <div className="flex gap-2 lg:gap-4">
               <Image src={htmlIcon} alt="HTML" />
+              {/* <Lottie
+                animationData={reactJS}
+                loop
+                autoplay
+                className="w-10 h-10"
+              /> */}
               <Image src={reactIcon} alt="React" />
               <Image src={nextJsIcon} alt="Next Js" />
               <Image src={cssIcon} alt="CSS3" />
@@ -78,7 +88,7 @@ const Home = () => {
         </p>
         <Link
           href="/about"
-          className="flex items-center gap-2 hover:opacity-50 transition-all duration-300 ease-in-out"
+          className="flex items-center gap-2 hover:opacity-50 transition-all duration-300 ease-in-out w-fit"
         >
           <p>More about me</p>
           <Image src={arrowUpRight} alt="Arrow up right" />
@@ -86,11 +96,10 @@ const Home = () => {
       </section>
 
       <WorkHistory />
-      <div className="mt-6 lg:mt-[5.5rem] space-y-2 lg:space-y-14">
+      <div className="mt-6 lg:mt-22 space-y-2">
         <hr />
-        <h4 className="text-3xl lg:text-[9.313rem] font-bricolage">My work</h4>
-        <hr />
-
+        <h4 className="text-3xl lg:text-[9.313rem] font-bricolage font-extrabold">My work</h4>
+        <hr/>
         <Work />
       </div>
     </div>

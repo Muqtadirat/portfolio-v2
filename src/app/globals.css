@@ -1,17 +1,58 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+@import 'tailwindcss';
 
-* {
+@theme {
+  --color-text-default: #0f0f0f;
+  --color-text-secondary: #707070;
+  --color-text-subdued: #979999;
+  --color-text-disabled: #b1b2b2;
+  --color-text-hovered: #262626;
+
+  --color-border-default: #c7c3c3;
+
+  --color-background-default: #fafafa;
+  --color-background-subdued: #f0f1f2;
+  --color-background-icon: #c7c3c3;
+
+  --color-surface-subdued: #f2f0f0;
+  --color-surface-disabled: #fafafa;
+  --color-surface-icon: #141414;
+
+  --font-roboto: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-bricolage: 'Bricolage Grotesque', 'Helvetica Neue', Helvetica, Arial,
+    sans-serif;
+  --font-inconsolata: 'Inconsolata', 'Courier New', Courier, monospace;
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+/* * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-}
+} */
 
 html {
   scroll-behavior: smooth;
 }
-
 
 body {
   height: 100vh;

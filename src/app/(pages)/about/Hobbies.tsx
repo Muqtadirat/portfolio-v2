@@ -8,13 +8,13 @@ const Hobbies = () => {
   const [selectedHobby, setSelectedHobby] = useState(hobbies[0]);
 
   return (
-    <div className="my-8 lg:my-[13rem]">
+    <div className="my-8 lg:my-52">
       <p className="lg:text-xl">
         When I am not writing code, you will find me doing one of these
       </p>
 
       <section className="mt-6 lg:mt-10 flex flex-col lg:flex-row gap-10 lg:gap-0 justify-between">
-        <div className="uppercase lg:space-y-10 font-bricolage text-4xl lg:text-[5.5rem] cursor-pointer">
+        <div className="uppercase lg:space-y-10 font-bricolage font-extrabold text-4xl lg:text-[5.5rem] cursor-pointer">
           {hobbies.map(({ hobby }) => (
             <p
               key={hobby}
