@@ -1,0 +1,11 @@
+export { default as digittallyPage } from './digit-tally page.png';
+export { default as digittallyPage2 } from './digit-tally page2.png';
+export { default as digittallyPage3 } from './digit-tally page3.png';
+export { default as digittallyApp } from './digit-tally app.png';
+export { default as digittallyApp2 } from './digit-tally app2.png';
+export { default as digittallyApp3 } from './digit-tally app3.png';
+export { default as digittallyApp4 } from './digit-tally app4.png';
+export { default as digittallyApp5 } from './digit-tally app5.png';
+export { default as digittallyApp6 } from './digit-tally app6.png';
+export { default as digittallyApp7 } from './digit-tally app7.png';
+export { default as candourLogo } from './candour.png';
