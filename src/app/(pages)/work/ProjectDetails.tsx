@@ -21,6 +21,8 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
   const project = projectDetails.find((proj) => proj.title === selectedProject);
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isImageLoading, setIsImageLoading] = useState(false);
+
 
   const handleNext = () => {
     if (project && project.image.length > 1) {
@@ -85,6 +87,9 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
             </div>
             <div className="relative w-full h-[300px] lg:h-[400px]">
               <div className="relative w-full h-full overflow-hidden">
+                {isImageLoading && (
+                  <div className="absolute inset-0 bg-white/60 animate-pulse rounded-2xl" />
+                )}
                 <motion.div
                   key={currentImageIndex}
                   initial={{ opacity: 0, x: 100 }}
@@ -99,6 +104,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                     className="rounded-2xl object-contain h-full"
                     priority
                     // layout="fill"
+                    onLoad={() => setIsImageLoading(false)}
                   />
                 </motion.div>
 
