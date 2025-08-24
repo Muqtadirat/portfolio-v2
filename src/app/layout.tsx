@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Layout from './layout/Index';
 import { Toaster } from 'sonner';
+import { CustomCursor } from '@/components';
 
 export const metadata: Metadata = {
   title: 'Muqtadirat Yussuff | Frontend Developer',
@@ -19,11 +20,12 @@ export default function RootLayout({
       <head>
         <link rel="icon" type="image/png" sizes="32x32" href="/logo.svg" />
       </head>
-      <body
-        className={`font-roboto`}
-      >
+      <body className={`font-roboto`}>
         <Toaster position="top-center" richColors closeButton />
-        <Layout>{children}</Layout>
+        <Layout>
+          <CustomCursor />
+          {children}
+        </Layout>
       </body>
     </html>
   );

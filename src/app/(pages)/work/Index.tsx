@@ -22,7 +22,7 @@ const Work = () => {
   const visibleProjects = isHomePage ? projects.slice(0, 4) : projects;
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 mb-10 lg:mb-52 mt-4 lg:mt-10">
+    <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 lg:gap-10 mb-10 lg:mb-52 mt-4 lg:mt-10">
       {visibleProjects.map(({ title, image }) => (
         <div
           key={title}
@@ -33,7 +33,7 @@ const Work = () => {
             <p className="font-bricolage font-extrabold text-2xl lg:text-[2rem]">{title}</p>
             <Image src={arrowUpRight} alt="Arrow up right" />
           </div>
-          <div className="relative h-[300px] lg:h-[506px] lg:w-[680px] cursor-pointer border-black border rounded-2xl">
+          <div className="relative h-[300px] lg:h-[506px] xl:w-[680px] cursor-pointer border-black border rounded-2xl">
             <Image
               src={image}
               alt={title}

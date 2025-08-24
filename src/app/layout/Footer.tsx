@@ -1,5 +1,6 @@
 import { EmailIcon, GithubIcon, LinkedinIcon } from '@/assets';
-import Form from '../components/Form';
+import { Form } from '@/components';
+
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -31,10 +32,10 @@ const Footer = () => {
   ];
 
   return (
-    <footer id="contact" className="px-6 lg:px-12 pb-12 pt-8 lg:pb-16 lg:pt-12">
+    <footer id="contact" className="px-6 lg:px-12 pb-12 pt-8 lg:pb-16 xl:pt-12">
       <Form />
 
-      <section className="lg:px-15 mt-10 lg:mt-32 flex justify-between lg:text-[2rem] uppercase">
+      <section className="xl:px-15 mt-10 lg:mt-20 xl:mt-32 flex justify-between lg:text-[2rem] uppercase">
         <h4>Muqtadirat Yussuff</h4>
         <h4>Frontend Developer</h4>
         <div className="flex gap-5 items-center">
