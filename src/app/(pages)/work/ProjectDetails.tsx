@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import projectDetails from './constants/projectDetails';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { arrowLeft, arrowRight } from '@/assets';
 
 interface ProjectDetailsProps {
@@ -39,6 +39,16 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
     }
   };
 
+  useEffect(() => {
+    if (project?.image?.length) {
+      const nextIndex = (currentImageIndex + 1) % project.image.length;
+      const img = new window.Image();
+
+      const nextImg = project.image[nextIndex];
+      img.src = typeof nextImg === 'string' ? nextImg : nextImg.src;
+    }
+  }, [currentImageIndex, project]);
+
   return (
     <AnimatePresence>
       {isOpen && project && (
@@ -49,8 +59,8 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
           transition={{ duration: 0.5 }}
           className="fixed inset-0 z-50 bg-black text-white py-6 lg:py-8 px-6 lg:px-12 h-screen rounded-t-3xl"
         >
-          <div className="flex items-center justify-between font-bricolage font-extrabold lg:text-[2rem]">
-            <p>{project.title}</p>
+          <div className="flex items-center gap-5 lg:gap-0 lg:justify-between font-bricolage font-extrabold lg:text-[2rem]">
+            <p className="max-w-2/3">{project.title}</p>
             <p>{project.year}</p>
             <p
               onClick={toggleDetails}
@@ -101,7 +111,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                     src={project.image[currentImageIndex]}
                     alt={`${project.title} image ${currentImageIndex + 1}`}
                     className="rounded-2xl object-contain h-full"
-                    priority
+                    priority={currentImageIndex === 0}
                     // layout="fill"
                     // onLoad={() => setIsImageLoading(false)}
                   />
