@@ -12,16 +12,19 @@ export { default as typescriptIcon } from './svg/typescript.svg';
 export { default as javacriptIcon } from './svg/javascript.svg';
 export { default as reactQueryIcon } from './svg/reactquery.svg';
 export { default as nextJsIcon } from './svg/nextdotjs.svg';
+export { default as framerIcon } from './svg/framer.svg';
 export { default as arrowUpRight } from './svg/arrow-up-right.svg';
 
 // colored
 export { default as cssColored } from './svg/css3-color.svg';
 export { default as htmlColored } from './svg/html5-color.svg';
+export { default as gsapColored } from './svg/gsap-color.svg';
 export { default as reduxColored } from './svg/redux-color.svg';
 export { default as reactColored } from './svg/react-color.svg';
 export { default as cypressColored } from './svg/cypress-color.svg';
 export { default as tailwindColored } from './svg/tailwindcss-color.svg';
 export { default as nextJsColored } from './svg/nextdotjs-color.svg';
+export { default as framerColored } from './svg/framer-color.svg';
 export { default as typescriptColored } from './svg/typescript-color.svg';
 export { default as javacriptColored } from './svg/javascript-color.svg';
 export { default as reactQueryColored } from './svg/reactquery-color.svg';

@@ -4,7 +4,9 @@ import {
   etchASketch,
   giriStore1,
   giriWeb1,
+  giriWebV,
   payritWeb,
+  payritWebV,
   timesheet1,
   todoList,
 } from '@/assets';
@@ -17,8 +19,12 @@ interface ProjectProps {
 
 const projects: ProjectProps[] = [
   {
-    title: 'Payrit Website',
-    image: payritWeb,
+    title: 'Payrit Website V2',
+    image: payritWebV,
+  },
+  {
+    title: 'GiriToday Landing Page V2',
+    image: giriWebV,
   },
   {
     title: 'Digit-tally Accounting Software',
@@ -27,6 +33,10 @@ const projects: ProjectProps[] = [
   {
     title: 'GiriToday Storefront',
     image: giriStore1,
+  },
+  {
+    title: 'Payrit Website',
+    image: payritWeb,
   },
   {
     title: 'GiriToday Landing Page',
@@ -40,14 +50,14 @@ const projects: ProjectProps[] = [
     title: 'Digit-tally Landing Page',
     image: digittallyPage,
   },
-  {
-    title: 'Etch A Sketch',
-    image: etchASketch,
-  },
-  {
-    title: 'To-Do List',
-    image: todoList,
-  },
+  // {
+  //   title: 'Etch A Sketch',
+  //   image: etchASketch,
+  // },
+  // {
+  //   title: 'To-Do List',
+  //   image: todoList,
+  // },
 ];
 
 export default projects;

@@ -11,6 +11,7 @@ import {
   checker,
   cssIcon,
   cypressIcon,
+  framerIcon,
   htmlIcon,
   nextJsIcon,
   reactIcon,
@@ -166,6 +167,12 @@ const Home = () => {
                 whileHover={{ scale: 1.2, rotate: -3 }}
               >
                 <Image src={tailwindIcon} alt="Tailwind" />
+              </motion.div>
+              <motion.div
+                variants={iconVariant}
+                whileHover={{ scale: 1.2, rotate: -3 }}
+              >
+                <Image src={framerIcon} alt="Framer motion" />
               </motion.div>
               <motion.div
                 variants={iconVariant}

@@ -72,7 +72,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
               </div>
               {project.noLink ? (
                 <p className="text-sm mt-6 lg:mt-10 text-white/60 italic">
-                  Still in development
+                  Link unavailable
                 </p>
               ) : (
                 <Link
