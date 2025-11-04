@@ -36,7 +36,6 @@ const Form = () => {
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
         parameters,
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
-        
       )
       .then(
         () => {
@@ -58,6 +57,8 @@ const Form = () => {
       )
       .catch((error: string) => console.log(error));
   };
+
+  const isDisabled = !formData.name.trim() || !formData.note.trim();
 
   return (
     <div className="max-w-[1000px] mx-auto">
@@ -89,7 +90,13 @@ const Form = () => {
 
         <button
           type="submit"
-          className="mt-6 lg:mt-10 py-3 px-4 rounded-lg bg-[#0A0A0A] text-white hover:bg-white hover:text-text-default hover:outline-solid outline-2 outline-black font-semibold transition-all duration-500 ease-in-out"
+          disabled={isDisabled}
+          className={`mt-6 lg:mt-10 py-3 px-4 rounded-lg font-semibold transition-all duration-500 ease-in-out
+    ${
+      isDisabled
+        ? 'bg-[#1C1C1C] text-white/40 cursor-not-allowed'
+        : 'bg-[#0A0A0A] text-white hover:bg-white hover:text-[#0A0A0A] hover:outline-solid outline-2 outline-[#0A0A0A]'
+    }`}
         >
           Send message
         </button>
