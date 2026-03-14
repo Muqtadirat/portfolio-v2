@@ -8,8 +8,6 @@ export { default as giriWebV3 } from './giri-web-v2-3.png';
 export { default as giriWebV4 } from './giri-web-v2-4.png';
 export { default as giriWebV5 } from './giri-web-v2-5.png';
 export { default as giriWebV6 } from './giri-web-v2-6.png';
-export { default as giriWebV7 } from './giri-web-v2-7.png';
-export { default as giriWebV8 } from './giri-web-v2-8.png';
 export { default as giriStore1 } from './giri-store1.png';
 export { default as giriStore2 } from './giri-store2.png';
 export { default as giriStore3 } from './giri-store3.png';
