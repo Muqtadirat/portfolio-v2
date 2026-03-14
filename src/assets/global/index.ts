@@ -3,6 +3,9 @@ export * from './candour';
 export * from './payrit';
 
 export { default as logo } from './logo.svg';
+export { default as art } from './art.jpg';
+export { default as anime } from './anime.jpg';
+export { default as books } from './books.jpg';
 export { default as checker } from './checker.png';
 export { default as console } from './console.png';
 

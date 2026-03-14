@@ -1,6 +1,7 @@
 import {
   digittallyApp,
   digittallyPage,
+  digiWeb,
   etchASketch,
   giriStore1,
   giriWeb1,
@@ -23,6 +24,10 @@ const projects: ProjectProps[] = [
     image: payritWebV,
   },
   {
+    title: 'Digit-tally Landing Page V2',
+    image: digiWeb,
+  },
+  {
     title: 'GiriToday Landing Page V2',
     image: giriWebV,
   },
@@ -35,16 +40,16 @@ const projects: ProjectProps[] = [
     image: giriStore1,
   },
   {
+    title: 'Digit-tally Timesheet',
+    image: timesheet1,
+  },
+  {
     title: 'Payrit Website',
     image: payritWeb,
   },
   {
     title: 'GiriToday Landing Page',
     image: giriWeb1,
-  },
-  {
-    title: 'Digit-tally Timesheet',
-    image: timesheet1,
   },
   {
     title: 'Digit-tally Landing Page',

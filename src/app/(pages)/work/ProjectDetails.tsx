@@ -21,10 +21,26 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
   const project = projectDetails.find((proj) => proj.title === selectedProject);
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  // const [isImageLoading, setIsImageLoading] = useState(false);
+  const [isImageLoading, setIsImageLoading] = useState(true);
+
+  // Reset to first image when project changes
+  useEffect(() => {
+    setCurrentImageIndex(0);
+    setIsImageLoading(true);
+  }, [selectedProject]);
+
+  // Preload next image
+  useEffect(() => {
+    if (!project?.image?.length) return;
+    const nextIndex = (currentImageIndex + 1) % project.image.length;
+    const img = new window.Image();
+    const nextImg = project.image[nextIndex];
+    img.src = typeof nextImg === 'string' ? nextImg : nextImg.src;
+  }, [currentImageIndex, project]);
 
   const handleNext = () => {
     if (project && project.image.length > 1) {
+      setIsImageLoading(true);
       setCurrentImageIndex((prev) =>
         prev === project.image.length - 1 ? 0 : prev + 1,
       );
@@ -33,21 +49,12 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
 
   const handlePrev = () => {
     if (project && project.image.length > 1) {
+      setIsImageLoading(true);
       setCurrentImageIndex((prev) =>
         prev === 0 ? project.image.length - 1 : prev - 1,
       );
     }
   };
-
-  useEffect(() => {
-    if (project?.image?.length) {
-      const nextIndex = (currentImageIndex + 1) % project.image.length;
-      const img = new window.Image();
-
-      const nextImg = project.image[nextIndex];
-      img.src = typeof nextImg === 'string' ? nextImg : nextImg.src;
-    }
-  }, [currentImageIndex, project]);
 
   return (
     <AnimatePresence>
@@ -96,9 +103,15 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
             </div>
             <div className="relative w-full h-[300px] lg:h-[400px]">
               <div className="relative w-full h-full overflow-hidden">
-                {/* {isImageLoading && (
-                  <div className="absolute inset-0 bg-white/60 animate-pulse rounded-2xl" />
-                )} */}
+                {isImageLoading && (
+                  <div className="absolute inset-0 z-10 rounded-2xl bg-white/10 animate-pulse flex flex-col items-center justify-center gap-2">
+                    <div className="w-6 h-6 border-2 border-white/40 border-t-white rounded-full animate-spin" />
+                    <p className="text-white/50 text-xs font-inconsolata tracking-widest uppercase">
+                      Loading image
+                    </p>
+                  </div>
+                )}
+
                 <motion.div
                   key={currentImageIndex}
                   initial={{ opacity: 0, x: 100 }}
@@ -112,13 +125,12 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                     alt={`${project.title} image ${currentImageIndex + 1}`}
                     className="rounded-2xl object-contain h-full"
                     priority={currentImageIndex === 0}
-                    // layout="fill"
-                    // onLoad={() => setIsImageLoading(false)}
+                    onLoad={() => setIsImageLoading(false)}
                   />
                 </motion.div>
 
                 {project.image.length > 1 && (
-                  <div className="absolute inset-0 flex justify-between items-center px-4">
+                  <div className="absolute inset-0 z-20 flex justify-between items-center px-4">
                     <button
                       onClick={handlePrev}
                       className="bg-surface-subdued cursor-pointer hover:bg-transparent p-3 transition-all ease-in-out duration-300 rounded-full"
