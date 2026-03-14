@@ -1,5 +1,5 @@
 import { StaticImageData } from 'next/image';
-import { checker, console } from '@/assets';
+import { anime, art, books, checker, console } from '@/assets';
 
 interface HobbiesProps {
   hobby: string;
@@ -9,11 +9,19 @@ interface HobbiesProps {
 const hobbies: HobbiesProps[] = [
   {
     hobby: 'Art',
-    image: checker,
+    image: art,
   },
   {
     hobby: 'Gaming',
     image: console,
+  },
+  {
+    hobby: 'Anime',
+    image: anime,
+  },
+  {
+    hobby: 'Reading',
+    image: books,
   },
 ];
 

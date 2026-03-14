@@ -58,7 +58,10 @@ const Form = () => {
       .catch((error: string) => console.log(error));
   };
 
-  const isDisabled = !formData.name.trim() || !formData.note.trim();
+  const isDisabled =
+    !formData.name.trim() ||
+    !formData.note.trim() ||
+    formData.note.trim().length < 20;
 
   return (
     <div className="max-w-[1000px] mx-auto">
@@ -86,6 +89,12 @@ const Form = () => {
             onChange={handleInputChange}
             placeholder="I'd like to speak to you about..."
           />
+          {formData.note.length > 0 && formData.note.trim().length < 20 && (
+            <p className="text-xs text-text-secondary mt-1">
+              {20 - formData.note.trim().length} more character
+              {20 - formData.note.trim().length === 1 ? '' : 's'} needed
+            </p>
+          )}
         </div>
 
         <button
