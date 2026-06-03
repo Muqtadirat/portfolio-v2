@@ -18,6 +18,13 @@ const history: HistoryProps[] = [
     logo: payritLogo,
   },
   {
+    role: 'Mid Frontend Developer',
+    company: 'Candour IT Services',
+    location: 'Lagos, Nigeria',
+    period: 'April 2024 - May 2026',
+    logo: candourLogo,
+  },
+  {
     role: 'Frontend Developer',
     company: 'GiriToday',
     location: 'Remote, United States',
@@ -25,11 +32,11 @@ const history: HistoryProps[] = [
     logo: giriLogo,
   },
   {
-    role: 'Frontend Developer',
-    company: 'Candour IT Services',
-    location: 'Lagos, Nigeria',
-    period: 'April 2024 - Present',
-    logo: candourLogo,
+    role: 'Volunteer Frontend Developer',
+    company: 'Winnov8',
+    location: 'Remote',
+    period: 'Nov 2023 - Feb 2024',
+    // logo: sheCodesLogo,
   },
   {
     role: 'Frontend Developer',
