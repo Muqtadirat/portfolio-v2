@@ -206,7 +206,7 @@ const Home = () => {
         viewport={{ once: true }}
       >
         <p className="text-xl lg:text-[2rem] font-medium uppercase leading-snug">
-          I have over 3 years of experience mostly working in small teams &
+          I have 4 years of experience mostly working in small teams &
           startups across fintech & SAAS industries where I applied “pixel
           perfect” principles for aesthetic value and “clean code” architecture.
         </p>

@@ -192,7 +192,7 @@ const projectDetails: ProjectDetailsProps[] = [
   },
   {
     title: 'Digit-tally Landing Page',
-    year: '2024 - 2026',
+    year: '2024 - 2025',
     // link: 'https://stgsvr008.digit-tally.io/',
     image: [digittallyPage, digittallyPage2, digittallyPage3],
     description:
@@ -204,6 +204,7 @@ const projectDetails: ProjectDetailsProps[] = [
       reactQueryColored,
       nextJsColored,
     ],
+    noLink: true,
   },
   {
     title: 'Digit-tally Timesheet',
