@@ -18,6 +18,19 @@ import {
   etchASketch2,
   etchASketch3,
   framerColored,
+  giriAdmin,
+  giriAdmin2,
+  giriAdmin3,
+  giriAdmin4,
+  giriAdmin5,
+  giriReferral,
+  giriReferral2,
+  giriReferral3,
+  giriReferral4,
+  giriSeller,
+  giriSeller2,
+  giriSeller3,
+  giriSeller4,
   giriStore1,
   giriStore2,
   giriStore3,
@@ -36,6 +49,10 @@ import {
   htmlColored,
   javacriptColored,
   nextJsColored,
+  payritDash,
+  payritDash2,
+  payritDash3,
+  payritDash4,
   payritWeb,
   payritWeb2,
   payritWeb3,
@@ -69,28 +86,33 @@ interface ProjectDetailsProps {
   image: StaticImageData[];
   stack: StaticImageData[];
   noLink?: boolean;
+  category: string[];
 }
 
 const projectDetails: ProjectDetailsProps[] = [
   {
-    title: 'Digit-tally Landing Page V2',
-    year: '2026 - Present',
-    link: 'https://www.digit-tally.io/',
-    image: [digiWeb, digiWeb2, digiWeb3, digiWeb4],
+    title: 'Payrit Admin Dashboard',
+    year: '2023 - Present',
+    noLink: true,
+    image: [payritDash, payritDash2, payritDash3, payritDash4],
     description:
-      'A redesign of the Digit-Tally landing page — an accounting platform for managing invoices, receipts, credit notes, sales, and taxes. V2 focused on a more polished UI, improved structure, and a stronger first impression for prospective users.',
-    role: 'Solely responsible for the entire rebuild, from design implementation to deployment, using Next.js, TypeScript, and Tailwind CSS.',
+      'Internal admin dashboard for a cross-border fintech platform offering multi-currency payments and physical and virtual card services. Built from scratch to replace a barely functional codebase, covering transaction management, customer profiles with multi-currency wallet views, reported transactions, overview statistics, and physical and virtual card management.',
+    role: 'Sole frontend developer. Rebuilt the dashboard from the ground up, introduced TypeScript across the codebase, and served as the primary frontend point of contact working directly with design and backend.',
     stack: [
       typescriptColored,
       tailwindColored,
+      framerColored,
+      reduxColored,
       reactQueryColored,
       nextJsColored,
     ],
+    category: ['Fintech', 'SaaS'],
   },
   {
     title: 'Payrit Website V2',
     year: '2025 - Present',
     link: 'https://www.payrit.com/',
+    category: ['Fintech', 'Landing Page'],
     image: [
       payritWebV,
       payritWebV2,
@@ -104,26 +126,27 @@ const projectDetails: ProjectDetailsProps[] = [
     role: 'I worked as the sole frontend developer using Next.js, Typescript, and Tanstack Query.',
     stack: [typescriptColored, tailwindColored, framerColored, nextJsColored],
   },
+
   {
-    title: 'GiriToday Landing Page V2',
+    title: 'GiriToday Storefront',
     year: '2025 - Present',
-    link: 'https://www.giritoday.com/',
-    image: [giriWebV, giriWebV2, giriWebV3, giriWebV4, giriWebV5, giriWebV6],
+    link: 'https://shop.giritoday.com/',
+    category: ['E-commerce'],
+    image: [giriStore1, giriStore2, giriStore3, giriStore4],
     description:
-      'The second version of GiriToday’s landing page introduces a cleaner and more refined UI, while continuing to serve as the entry point for an African E-Commerce platform connecting global buyers with local African sellers.',
-    role: 'Independently developed the landing page using Next.js, TypeScript, and Tailwind CSS.',
+      'Storefront for GiriToday, an African e-commerce platform connecting global buyers with local African sellers. It aims to bridge the gap between local artisans and the global market.',
+    role: 'I worked in a team of two to develop the storefront using Next.js, TypeScript, and Tailwind CSS.',
     stack: [
       typescriptColored,
       tailwindColored,
+      reduxColored,
       reactQueryColored,
-      framerColored,
       nextJsColored,
     ],
   },
-
   {
     title: 'Digit-tally Accounting Software',
-    year: '2024 - Present',
+    year: '2024 - 2026',
     link: 'https://app.digit-tally.io/auth/signin',
     image: [
       digittallyApp,
@@ -145,15 +168,16 @@ const projectDetails: ProjectDetailsProps[] = [
       gsapColored,
       nextJsColored,
     ],
+    category: ['SaaS'],
   },
   {
-    title: 'GiriToday Storefront',
+    title: 'GiriToday Admin',
     year: '2025 - Present',
-    link: 'https://shop.giritoday.com/',
-    image: [giriStore1, giriStore2, giriStore3, giriStore4],
+    noLink: true,
+    image: [giriAdmin, giriAdmin2, giriAdmin3, giriAdmin4, giriAdmin5],
     description:
-      'Storefront for GiriToday, an African e-commerce platform connecting global buyers with local African sellers. It aims to bridge the gap between local artisans and the global market.',
-    role: 'I worked in a team of two to develop the storefront using Next.js, TypeScript, and Tailwind CSS.',
+      'Internal admin dashboard for GiriToday, an African e-commerce platform connecting global buyers with local African sellers. The dashboard provides oversight across the entire platform including user management, order tracking, and platform analytics.',
+    role: 'Worked in a team of two to build the admin dashboard using Next.js, TypeScript, and Tailwind CSS, contributing to features across user management, data tables, and platform monitoring.',
     stack: [
       typescriptColored,
       tailwindColored,
@@ -161,23 +185,91 @@ const projectDetails: ProjectDetailsProps[] = [
       reactQueryColored,
       nextJsColored,
     ],
+    category: ['E-commerce', 'SaaS'],
+  },
+  {
+    title: 'GiriToday Seller App',
+    year: '2025 - Present',
+    link: 'https://sell.giritoday.com/',
+    image: [giriSeller, giriSeller2, giriSeller3, giriSeller4],
+    description:
+      'Seller-facing application for GiriToday, enabling African sellers to manage their storefronts, list products, track inventory, and fulfill orders on a platform connecting them to global buyers.',
+    role: 'Worked in a team of two to build the seller app using Next.js, TypeScript, and Tailwind CSS, contributing to product listing flows, inventory management views, and order management.',
+    stack: [
+      typescriptColored,
+      tailwindColored,
+      reduxColored,
+      reactQueryColored,
+      nextJsColored,
+    ],
+    category: ['E-commerce'],
+  },
+  {
+    title: 'GiriToday Landing Page V2',
+    year: '2025 - Present',
+    link: 'https://www.giritoday.com/',
+    image: [giriWebV, giriWebV2, giriWebV3, giriWebV4, giriWebV5, giriWebV6],
+    description:
+      'The second version of GiriToday’s landing page introduces a cleaner and more refined UI, while continuing to serve as the entry point for an African E-Commerce platform connecting global buyers with local African sellers.',
+    role: 'Independently developed the landing page using Next.js, TypeScript, and Tailwind CSS.',
+    stack: [
+      typescriptColored,
+      tailwindColored,
+      reactQueryColored,
+      framerColored,
+      nextJsColored,
+    ],
+    category: ['E-commerce', 'Landing Page'],
+  },
+  {
+    title: 'GiriToday Referral Hub',
+    year: '2025',
+    link: 'https://referral.giritoday.com/',
+    image: [giriReferral, giriReferral2, giriReferral3, giriReferral4],
+    description:
+      'Referral platform for GiriToday, an African e-commerce platform connecting global buyers with local African sellers. The hub allows users to track referrals, monitor rewards, and grow their network on the platform.',
+    role: 'Sole developer. Independently designed and built the referral app from scratch using Next.js, TypeScript, and Tailwind CSS.',
+    stack: [
+      typescriptColored,
+      tailwindColored,
+      reactQueryColored,
+      nextJsColored,
+    ],
+    category: ['E-commerce'],
+  },
+  {
+    title: 'Digit-tally Landing Page V2',
+    year: '2026',
+    link: 'https://www.digit-tally.io/',
+    image: [digiWeb, digiWeb2, digiWeb3, digiWeb4],
+    description:
+      'A redesign of the Digit-Tally landing page — an accounting platform for managing invoices, receipts, credit notes, sales, and taxes. V2 focused on a more polished UI, improved structure, and a stronger first impression for prospective users.',
+    role: 'Solely responsible for the entire rebuild, from design implementation to deployment, using Next.js, TypeScript, and Tailwind CSS.',
+    stack: [
+      typescriptColored,
+      tailwindColored,
+      reactQueryColored,
+      nextJsColored,
+    ],
+    category: ['SaaS', 'Landing Page'],
   },
   {
     title: 'Payrit Website',
     year: '2024',
-    // link: 'https://www.payrit.com/',
+
     image: [payritWeb, payritWeb2, payritWeb3],
     description:
       'Payrit is a payment service that offers the fastest, safest, and most complete personal and business financial services.',
     role: 'I worked as the sole frontend developer using Next.js, Typescript, and Tanstack Query.',
     stack: [typescriptColored, tailwindColored, nextJsColored],
     noLink: true,
+    category: ['Fintech', 'Landing Page'],
   },
 
   {
     title: 'GiriToday Landing Page',
     year: '2025',
-    // link: 'https://www.giritoday.com/',
+
     image: [giriWeb1, giriWeb2, giriWeb3, giriWeb4],
     description:
       'Landing page for GiriToday, an African E-Commerce Platform connecting global buyers with local African seller aiming to bridge the gap between local African artisans and the global market.',
@@ -189,6 +281,7 @@ const projectDetails: ProjectDetailsProps[] = [
       nextJsColored,
     ],
     noLink: true,
+    category: ['E-commerce', 'Landing Page'],
   },
   {
     title: 'Digit-tally Landing Page',
@@ -205,6 +298,7 @@ const projectDetails: ProjectDetailsProps[] = [
       nextJsColored,
     ],
     noLink: true,
+    category: ['SaaS', 'Landing Page'],
   },
   {
     title: 'Digit-tally Timesheet',
@@ -229,11 +323,13 @@ const projectDetails: ProjectDetailsProps[] = [
       framerColored,
     ],
     noLink: true,
+    category: ['SaaS'],
   },
 
   {
     title: 'Etch A Sketch',
     year: '2023',
+    category: ['Other'],
     link: 'https://etch-a-sketch-eight-dun.vercel.app/',
     image: [etchASketch, etchASketch2, etchASketch3],
     description:
@@ -244,6 +340,7 @@ const projectDetails: ProjectDetailsProps[] = [
   {
     title: 'To-Do List',
     year: '2023',
+    category: ['Other'],
     link: 'https://zingy-otter-572368.netlify.app/',
     image: [todoList, todoList2],
     description:

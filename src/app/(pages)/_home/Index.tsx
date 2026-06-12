@@ -121,10 +121,11 @@ const Home = () => {
             animate="show"
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <p className="lg:text-xl">
+            {/* <p className="lg:text-xl">
               Right now I build software for the web using Next.js, React &
               Typescript and I am exploring Express Js, Mongoose, Node.js
-            </p>
+            </p> */}
+            <div></div>
 
             <motion.div
               className="flex gap-2 lg:gap-4"

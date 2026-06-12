@@ -36,15 +36,15 @@ const history: HistoryProps[] = [
     company: 'Winnov8',
     location: 'Remote',
     period: 'Nov 2023 - Feb 2024',
-    // logo: sheCodesLogo,
+
   },
-  {
-    role: 'Frontend Developer',
-    company: 'SheCodes',
-    location: 'Remote',
-    period: '2023',
-    logo: sheCodesLogo,
-  },
+  // {
+  //   role: 'Frontend Developer',
+  //   company: 'SheCodes',
+  //   location: 'Remote',
+  //   period: '2023',
+  //   logo: sheCodesLogo,
+  // },
 ];
 
 export default history;

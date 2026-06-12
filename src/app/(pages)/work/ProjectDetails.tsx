@@ -77,7 +77,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
             </p>
           </div>
           <div className="grid xl:grid-cols-2 gap-6 font-inconsolata mt-10 lg:mt-25">
-            <div className="flex flex-col justify-between">
+            <div className="flex flex-col justify-between overflow-y-auto max-h-[70vh] pr-2">
               <p className="mb-4 text-base lg:text-[2rem] font-medium leading-normal uppercase">
                 {project.description}
               </p>

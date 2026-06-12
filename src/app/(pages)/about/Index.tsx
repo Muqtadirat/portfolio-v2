@@ -45,9 +45,9 @@ const About = () => {
   return (
     <>
       <div className="flex flex-col justify-center items-center gap-4 lg:gap-10">
-        <h1 className="font-bricolage font-extrabold text-3xl lg:text-[149px] lg:leading-none max-w-[800px]">
+        {/* <h1 className="font-bricolage font-extrabold text-3xl lg:text-[149px] lg:leading-none max-w-[800px]">
           Passionate Frontend Developer
-        </h1>
+        </h1> */}
 
         <div ref={ref} className="w-full lg:w-[831px] h-auto">
           <svg
@@ -130,14 +130,17 @@ const About = () => {
 
         <div className="space-y-3 lg:space-y-6 max-w-[771px]">
           <p className="uppercase font-medium text-lg lg:text-[2rem] lg:leading-snug">
-            I am a frontend developer passionate about building amazing
-            experiences. I see every project as an opportunity to learn new
-            concepts.
+            I am a frontend developer with 4 years of experience building
+            production applications across fintech, e-commerce, and business
+            software. I care about the details — how things look, how they feel,
+            and how well they hold up as a product grows.
           </p>
           <p className="lg:text-xl">
-            My path as an engineer is one I hope drives me through the journey
-            of fullstack product engineering where I am able to define
-            end-to-end experiences and functions for the softwares I help build.
+            I have spent most of my career working in small teams and startups,
+            owning features end-to-end and solving problems that go beyond just
+            writing code. Outside of work I am into art, gaming, anime, and
+            reading — which probably explains why I care so much about the
+            experience side of what I build.
           </p>
         </div>
       </div>
