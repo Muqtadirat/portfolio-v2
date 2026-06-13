@@ -58,7 +58,7 @@ const Work = () => {
 
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 lg:gap-10 mb-10 lg:mb-52 mt-4 lg:mt-10">
         <AnimatePresence mode="popLayout">
-          {visibleProjects.map(({ title, image }) => (
+          {visibleProjects.map(({ title, image, description }) => (
             <motion.div
               key={title}
               layout
@@ -69,11 +69,17 @@ const Work = () => {
               className="space-y-4"
               onClick={() => toggleDetails(title)}
             >
-              <div className="flex items-center justify-between cursor-pointer">
-                <p className="font-bricolage font-extrabold text-2xl lg:text-[2rem]">
-                  {title}
+              <div>
+                <div className="flex items-center justify-between cursor-pointer">
+                  <p className="font-bricolage font-extrabold text-2xl lg:text-[2rem]">
+                    {title}
+                  </p>
+
+                  <Image src={arrowUpRight} alt="Arrow up right" />
+                </div>
+                <p className="text-text-secondary mt-1 text-sm font-medium">
+                  {description}
                 </p>
-                <Image src={arrowUpRight} alt="Arrow up right" />
               </div>
               <div className="relative h-[300px] lg:h-[506px] xl:w-[680px] cursor-pointer border-black border rounded-2xl">
                 <Image

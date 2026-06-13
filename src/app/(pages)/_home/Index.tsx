@@ -207,14 +207,20 @@ const Home = () => {
         viewport={{ once: true }}
       >
         <p className="text-xl lg:text-[2rem] font-medium uppercase leading-snug">
-          I have 4 years of experience mostly working in small teams &
-          startups across fintech & SAAS industries where I applied “pixel
-          perfect” principles for aesthetic value and “clean code” architecture.
+          I have 4 years of experience mostly working in small teams & startups
+          across fintech & SAAS industries where I applied “pixel perfect”
+          principles for aesthetic value and “clean code” architecture.
         </p>
-        <p className="lg:text-xl">
+        {/* <p className="lg:text-xl">
           Passionate about web technologies and building products that
           positively change the way humans do things. I like to create memorable
           experience for human-computer interactions.
+        </p> */}
+        <p className="lg:text-xl">
+          I build things for the web that actually feel good to use. The kind of
+          interfaces where the detail work shows — interactions that feel
+          considered, layouts that just make sense, and code that holds up as
+          the product grows.
         </p>
         <Link
           href="/about"
