@@ -13,14 +13,14 @@ const history: HistoryProps[] = [
   {
     role: 'Lead Frontend Developer',
     company: 'Payrit',
-    location: 'Lagos, Nigeria',
+    location: 'Remote, Nigeria',
     period: 'Dec 2023 - Present',
     logo: payritLogo,
   },
   {
     role: 'Mid Frontend Developer',
     company: 'Candour IT Services',
-    location: 'Lagos, Nigeria',
+    location: 'Remote, Nigeria',
     period: 'April 2024 - May 2026',
     logo: candourLogo,
   },
