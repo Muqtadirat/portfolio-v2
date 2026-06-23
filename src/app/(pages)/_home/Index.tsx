@@ -1,9 +1,9 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 
 import {
   arrowDown,
@@ -45,6 +45,22 @@ const iconVariant = {
 };
 
 const Home = () => {
+  const [locIndex, setLocIndex] = React.useState(0);
+
+  const locations = [
+    '{the internet}',
+    '{somewhere, on earth}',
+    '{03°22′N, 06°27′E}',
+    // '{undefined}',
+  ];
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setLocIndex((i) => (i + 1) % locations.length);
+    }, 4500);
+    return () => clearInterval(id);
+  }, []);
+
   return (
     <div className="snap-y snap-mandatory">
       <motion.div
@@ -56,9 +72,18 @@ const Home = () => {
         <div className="rounded h-10 w-10 bg-surface-icon"></div>
         <div>
           <p className="uppercase font-semibold">Muqtadirat Yussuff</p>
-          <p className="font-inconsolata text-text-secondary">
-            &#123;Lagos, Nigeria&#125;
-          </p>
+          <AnimatePresence mode="wait">
+            <motion.p
+              key={locIndex}
+              className="font-inconsolata text-text-secondary"
+              initial={{ opacity: 0, y: 6 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -6 }}
+              transition={{ duration: 0.3 }}
+            >
+              {locations[locIndex]}
+            </motion.p>
+          </AnimatePresence>
         </div>
       </motion.div>
 
@@ -218,7 +243,7 @@ const Home = () => {
         </p> */}
         <p className="lg:text-xl">
           I build things for the web that actually feel good to use. The kind of
-          interfaces where the detail work shows — interactions that feel
+          interfaces where the detail work shows, interactions that feel
           considered, layouts that just make sense, and code that holds up as
           the product grows.
         </p>

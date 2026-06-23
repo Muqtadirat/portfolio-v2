@@ -132,14 +132,14 @@ const About = () => {
           <p className="uppercase font-medium text-lg lg:text-[2rem] lg:leading-snug">
             I am a frontend developer with 4 years of experience building
             production applications across fintech, e-commerce, and business
-            software. I care about the details — how things look, how they feel,
+            software. I care about the details, how things look, how they feel,
             and how well they hold up as a product grows.
           </p>
           <p className="lg:text-xl">
             I have spent most of my career working in small teams and startups,
             owning features end-to-end and solving problems that go beyond just
             writing code. Outside of work I am into art, gaming, anime, and
-            reading — which probably explains why I care so much about the
+            reading, which probably explains why I care so much about the
             experience side of what I build.
           </p>
         </div>
