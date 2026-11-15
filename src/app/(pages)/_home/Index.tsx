@@ -63,17 +63,16 @@ const techIcons = [
   { mono: cypressIcon, color: cypressColored, alt: 'Cypress' },
 ] as const;
 
+const locations = [
+  '{the internet}',
+  '{somewhere, on earth}',
+  '{03°22′N, 06°27′E}',
+];
+
 const Home = () => {
   const [locIndex, setLocIndex] = React.useState(0);
   const { resolvedTheme } = useTheme();
   const isDark = resolvedTheme === 'dark';
-
-  const locations = [
-    '{the internet}',
-    '{somewhere, on earth}',
-    '{03°22′N, 06°27′E}',
-    // '{undefined}',
-  ];
 
   useEffect(() => {
     const id = setInterval(() => {
