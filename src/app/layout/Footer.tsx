@@ -1,5 +1,7 @@
+'use client';
+
 import { EmailIcon, GithubIcon, LinkedinIcon } from '@/assets';
-import { Form } from '@/components';
+import { Form, useTheme } from '@/components';
 
 import Link from 'next/link';
 import { useState } from 'react';
@@ -15,6 +17,10 @@ interface SocialsProps {
 
 const Footer = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const { resolvedTheme } = useTheme();
+
+  const defaultFill = resolvedTheme === 'dark' ? '#e8e8e8' : '#141414';
+  const hoverFill = resolvedTheme === 'dark' ? '#a0a0a0' : '#979999';
 
   const socials: SocialsProps[] = [
     {
@@ -32,7 +38,10 @@ const Footer = () => {
   ];
 
   return (
-    <footer id="contact" className="px-6 lg:px-12 pb-12 pt-8 lg:pb-16 xl:pt-12">
+    <footer
+      id="contact"
+      className="px-6 lg:px-12 pb-12 pt-8 lg:pb-16 xl:pt-12 text-text-default"
+    >
       <Form />
 
       <section className="xl:px-15 mt-10 lg:mt-20 xl:mt-32 flex justify-between lg:text-[2rem] uppercase">
@@ -41,6 +50,7 @@ const Footer = () => {
         <div className="flex gap-5 items-center">
           {socials.map(({ href, Icon }, index) => {
             const isEmail = href.startsWith('mailto:');
+            const fill = hoveredIndex === index ? hoverFill : defaultFill;
 
             return isEmail ? (
               <a
@@ -49,7 +59,7 @@ const Footer = () => {
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
-                <Icon fill={hoveredIndex === index ? '#979999' : '#141414'} />
+                <Icon fill={fill} />
               </a>
             ) : (
               <Link
@@ -59,7 +69,7 @@ const Footer = () => {
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
-                <Icon fill={hoveredIndex === index ? '#979999' : '#141414'} />
+                <Icon fill={fill} />
               </Link>
             );
           })}

@@ -7,6 +7,7 @@ import navLinks from './navLinks';
 import Hamburger from 'hamburger-react';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
+import { ThemeToggle, useTheme } from '@/components';
 
 interface MobileNavProps {
   pathname: string;
@@ -15,6 +16,7 @@ interface MobileNavProps {
 const MobileNav: React.FC<MobileNavProps> = ({ pathname }) => {
   const [showMenu, setShowMenu] = useState(false);
   const router = useRouter();
+  const { resolvedTheme } = useTheme();
 
   const handleLinkClick = (href: string) => {
     setShowMenu(false);
@@ -22,25 +24,28 @@ const MobileNav: React.FC<MobileNavProps> = ({ pathname }) => {
   };
 
   return (
-    <nav className="block lg:hidden fixed top-0 z-50 left-1/2 transform -translate-x-1/2 w-full max-w-[1232px] px-4 py-3 rounded-sm bg-background-default">
+    <nav className="block lg:hidden fixed top-0 z-50 left-1/2 transform -translate-x-1/2 w-full max-w-[1232px] px-4 py-3 rounded-sm bg-background-default text-text-default">
       <div className="flex justify-between items-center">
-        <Image src={logo} alt="Muqtadirat" />
+        <Image src={logo} alt="Muqtadirat" className="dark:invert" />
 
-        <Hamburger
-          toggled={showMenu}
-          toggle={setShowMenu}
-          rounded
-          size={26}
-          color="#333"
-          duration={0.6}
-          label="Show menu"
-        />
+        <div className="flex items-center gap-3">
+          <ThemeToggle />
+          <Hamburger
+            toggled={showMenu}
+            toggle={setShowMenu}
+            rounded
+            size={26}
+            color={resolvedTheme === 'dark' ? '#e8e8e8' : '#333'}
+            duration={0.6}
+            label="Show menu"
+          />
+        </div>
 
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: showMenu ? 1 : 0, y: showMenu ? 0 : -20 }}
           transition={{ duration: 0.4 }}
-          className="absolute top-12 left-0 right-0 py-6 px-4 h-screen bg-background-default text-sm text-default font-semibold z-50"
+          className="absolute top-12 left-0 right-0 py-6 px-4 h-screen bg-background-default text-sm text-text-default font-semibold z-50"
           style={{ pointerEvents: showMenu ? 'auto' : 'none' }}
         >
           <ul className="space-y-10">

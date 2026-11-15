@@ -103,8 +103,8 @@ const Form = () => {
           className={`mt-6 lg:mt-10 py-3 px-4 rounded-lg font-semibold transition-all duration-500 ease-in-out
     ${
       isDisabled
-        ? 'bg-[#1C1C1C] text-white/40 cursor-not-allowed'
-        : 'bg-[#0A0A0A] text-white hover:bg-white hover:text-[#0A0A0A] hover:outline-solid outline-2 outline-[#0A0A0A]'
+        ? 'bg-text-hovered text-background-default/40 cursor-not-allowed'
+        : 'bg-text-default text-background-default hover:bg-background-default hover:text-text-default hover:outline-solid outline-2 outline-text-default'
     }`}
         >
           Send message

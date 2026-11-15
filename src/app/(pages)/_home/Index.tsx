@@ -8,22 +8,29 @@ import { AnimatePresence, motion } from 'framer-motion';
 import {
   arrowDown,
   arrowUpRight,
-  checker,
+  cssColored,
   cssIcon,
+  cypressColored,
   cypressIcon,
+  framerColored,
   framerIcon,
+  htmlColored,
   htmlIcon,
+  nextJsColored,
   nextJsIcon,
+  reactColored,
   reactIcon,
-  // reactJS,
+  reactQueryColored,
   reactQueryIcon,
+  reduxColored,
   reduxIcon,
+  tailwindColored,
   tailwindIcon,
 } from '@/assets';
+import { useTheme } from '@/components';
 
 import WorkHistory from './History';
 import Work from '../work/Index';
-// import Lottie from 'lottie-react';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -44,15 +51,28 @@ const iconVariant = {
   show: { opacity: 1, y: 0 },
 };
 
+const techIcons = [
+  { mono: htmlIcon, color: htmlColored, alt: 'HTML' },
+  { mono: reactIcon, color: reactColored, alt: 'React' },
+  { mono: nextJsIcon, color: nextJsColored, alt: 'Next Js', invertInDark: true },
+  { mono: cssIcon, color: cssColored, alt: 'CSS3' },
+  { mono: tailwindIcon, color: tailwindColored, alt: 'Tailwind' },
+  { mono: framerIcon, color: framerColored, alt: 'Framer motion' },
+  { mono: reduxIcon, color: reduxColored, alt: 'Redux' },
+  { mono: reactQueryIcon, color: reactQueryColored, alt: 'React query' },
+  { mono: cypressIcon, color: cypressColored, alt: 'Cypress' },
+] as const;
+
+const locations = [
+  '{the internet}',
+  '{somewhere, on earth}',
+  '{03°22′N, 06°27′E}',
+];
+
 const Home = () => {
   const [locIndex, setLocIndex] = React.useState(0);
-
-  const locations = [
-    '{the internet}',
-    '{somewhere, on earth}',
-    '{03°22′N, 06°27′E}',
-    // '{undefined}',
-  ];
+  const { resolvedTheme } = useTheme();
+  const isDark = resolvedTheme === 'dark';
 
   useEffect(() => {
     const id = setInterval(() => {
@@ -104,7 +124,7 @@ const Home = () => {
             {Array.from({ length: 25 }).map((_, i) => (
               <motion.div
                 key={i}
-                className="w-4 bg-black rounded-full"
+                className="w-4 bg-text-default rounded-full"
                 animate={{ height: ['40px', '140px', '40px'] }}
                 transition={{
                   repeat: Infinity,
@@ -123,7 +143,7 @@ const Home = () => {
             <Image
               src={arrowDown}
               alt="Down arrow"
-              className="hidden lg:block"
+              className="hidden lg:block dark:invert"
             />
           </motion.div>
         </div>
@@ -158,66 +178,25 @@ const Home = () => {
               initial="hidden"
               animate="show"
             >
-              <motion.div
-                variants={iconVariant}
-                whileHover={{ scale: 1.2, rotate: -3 }}
-              >
-                <Image src={htmlIcon} alt="HTML" />
-              </motion.div>
-              {/* <Lottie
-                animationData={reactJS}
-                loop
-                autoplay
-                className="w-10 h-10"
-              /> */}
-              <motion.div
-                variants={iconVariant}
-                whileHover={{ scale: 1.2, rotate: -3 }}
-              >
-                <Image src={reactIcon} alt="React" />
-              </motion.div>
-              <motion.div
-                variants={iconVariant}
-                whileHover={{ scale: 1.2, rotate: -3 }}
-              >
-                <Image src={nextJsIcon} alt="Next Js" />
-              </motion.div>
-              <motion.div
-                variants={iconVariant}
-                whileHover={{ scale: 1.2, rotate: -3 }}
-              >
-                <Image src={cssIcon} alt="CSS3" />
-              </motion.div>
-              <motion.div
-                variants={iconVariant}
-                whileHover={{ scale: 1.2, rotate: -3 }}
-              >
-                <Image src={tailwindIcon} alt="Tailwind" />
-              </motion.div>
-              <motion.div
-                variants={iconVariant}
-                whileHover={{ scale: 1.2, rotate: -3 }}
-              >
-                <Image src={framerIcon} alt="Framer motion" />
-              </motion.div>
-              <motion.div
-                variants={iconVariant}
-                whileHover={{ scale: 1.2, rotate: -3 }}
-              >
-                <Image src={reduxIcon} alt="Redux" />
-              </motion.div>
-              <motion.div
-                variants={iconVariant}
-                whileHover={{ scale: 1.2, rotate: -3 }}
-              >
-                <Image src={reactQueryIcon} alt="React query" />
-              </motion.div>
-              <motion.div
-                variants={iconVariant}
-                whileHover={{ scale: 1.2, rotate: -3 }}
-              >
-                <Image src={cypressIcon} alt="Cypress" />
-              </motion.div>
+              {techIcons.map(({ mono, color, alt, ...rest }) => {
+                const invertInDark =
+                  'invertInDark' in rest && rest.invertInDark;
+                return (
+                  <motion.div
+                    key={alt}
+                    variants={iconVariant}
+                    whileHover={{ scale: 1.2, rotate: -3 }}
+                  >
+                    <Image
+                      src={isDark ? color : mono}
+                      alt={alt}
+                      className={
+                        isDark && invertInDark ? 'invert' : undefined
+                      }
+                    />
+                  </motion.div>
+                );
+              })}
             </motion.div>
           </motion.div>
         </div>
@@ -256,7 +235,11 @@ const Home = () => {
             animate={{ x: [0, 5, 0] }}
             transition={{ repeat: Infinity, duration: 1.5 }}
           >
-            <Image src={arrowUpRight} alt="Arrow up right" />
+            <Image
+              src={arrowUpRight}
+              alt="Arrow up right"
+              className="dark:invert"
+            />
           </motion.div>
         </Link>
       </motion.section>
@@ -268,10 +251,10 @@ const Home = () => {
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
           transition={{ duration: 0.8 }}
-          className="origin-center"
+          className="origin-center border-border-default"
         />
         <motion.h4
-          className="text-3xl lg:text-[9.313rem] font-bricolage font-extrabold"
+          className="text-3xl lg:text-[9.313rem] font-bricolage font-extrabold text-text-default"
           variants={fadeUp}
           initial="hidden"
           whileInView="show"
@@ -283,7 +266,7 @@ const Home = () => {
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="origin-center"
+          className="origin-center border-border-default"
         />
         <Work />
       </div>

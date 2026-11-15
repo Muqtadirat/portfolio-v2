@@ -9,8 +9,8 @@ const WorkHistory = () => {
 
   return (
     <div className="mt-10 lg:mt-48">
-      <h4 className="text-3xl lg:text-[5.5rem] lg:leading-none font-bricolage font-extrabold">
-        Work <br className='hidden lg:block'/> history
+      <h4 className="text-3xl lg:text-[5.5rem] lg:leading-none font-bricolage font-extrabold text-text-default">
+        Work <br className="hidden lg:block" /> history
       </h4>
 
       <div className="flex justify-end mt-5 lg:mt-10">
@@ -37,7 +37,7 @@ const WorkHistory = () => {
                   <p className="text-xs text-text-subdued">{period}</p>
                 </div>
               </div>
-              <hr className="my-4" />
+              <hr className="my-4 border-border-default" />
             </section>
           ))}
         </div>
