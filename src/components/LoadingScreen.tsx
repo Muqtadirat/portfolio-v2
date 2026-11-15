@@ -17,7 +17,7 @@ const LoadingScreen = () => {
         <motion.div
           exit={{ opacity: 0 }}
           transition={{ duration: 0.6, ease: 'easeInOut' }}
-          className="fixed inset-0 z-[100] bg-white flex items-center justify-center"
+          className="fixed inset-0 z-[100] bg-background-default text-text-default flex items-center justify-center"
         >
           <svg
             width="120"

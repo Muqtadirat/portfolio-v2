@@ -46,8 +46,8 @@ const Work = () => {
               onClick={() => setActiveFilter(filter)}
               className={`px-4 py-2 rounded-full text-sm font-medium border transition-all duration-200 cursor-pointer ${
                 activeFilter === filter
-                  ? 'bg-black text-white border-black'
-                  : 'bg-transparent text-black border-black/30 hover:border-black'
+                  ? 'bg-text-default text-background-default border-text-default'
+                  : 'bg-transparent text-text-default border-text-default/30 hover:border-text-default'
               }`}
             >
               {filter}
@@ -75,13 +75,17 @@ const Work = () => {
                     {title}
                   </p>
 
-                  <Image src={arrowUpRight} alt="Arrow up right" />
+                  <Image
+                    src={arrowUpRight}
+                    alt="Arrow up right"
+                    className="dark:invert"
+                  />
                 </div>
                 <p className="text-text-secondary mt-1 text-sm font-medium">
                   {description}
                 </p>
               </div>
-              <div className="relative h-[300px] lg:h-[506px] xl:w-[680px] cursor-pointer border-black border rounded-2xl">
+              <div className="relative h-[300px] lg:h-[506px] xl:w-[680px] cursor-pointer border-text-default border rounded-2xl">
                 <Image
                   src={image}
                   alt={title}
