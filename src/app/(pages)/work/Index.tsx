@@ -13,7 +13,7 @@ const filters = [
   'Fintech',
   'E-commerce',
   'SaaS',
-  'Landing Page',
+  'Marketing Website',
   // 'Other',
 ];
 

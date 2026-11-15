@@ -26,3 +26,12 @@ export { default as giriReferral } from './giri-referral1.png';
 export { default as giriReferral2 } from './giri-referral2.png';
 export { default as giriReferral3 } from './giri-referral3.png';
 export { default as giriReferral4 } from './giri-referral4.png';
+//
+export { default as giricarts } from './giricarts1.png';
+export { default as giricarts2 } from './giricarts2.png';
+export { default as giricarts3 } from './giricarts3.png';
+export { default as cartsVendor } from './carts-vendor1.png';
+export { default as cartsVendor2 } from './carts-vendor2.png';
+export { default as cartsVendor3 } from './carts-vendor3.png';
+export { default as cartsVendor4 } from './carts-vendor4.png';
+export { default as cartsVendor5 } from './carts-vendor5.png';

@@ -2,7 +2,7 @@ import {
   digittallyApp,
   digittallyPage,
   digiWeb,
-  etchASketch,
+  // etchASketch,
   giriAdmin,
   giriReferral,
   giriSeller,
@@ -13,7 +13,9 @@ import {
   payritWeb,
   payritWebV,
   timesheet1,
-  todoList,
+  // todoList,
+  giricarts,
+  cartsVendor,
 } from '@/assets';
 import { StaticImageData } from 'next/image';
 
@@ -21,7 +23,7 @@ interface ProjectProps {
   title: string;
   image: StaticImageData;
   category: string[];
-  description:string
+  description: string;
 }
 
 const projects: ProjectProps[] = [
@@ -33,9 +35,9 @@ const projects: ProjectProps[] = [
       'Inherited a broken codebase. Rebuilt the entire fintech dashboard solo.',
   },
   {
-    title: 'Payrit Website V2',
+    title: 'Payrit Marketing Website V2',
     image: payritWebV,
-    category: ['Fintech', 'Landing Page'],
+    category: ['Fintech', 'Marketing Website'],
     description:
       'Sole developer on a fintech marketing site with USDC and cross-border payment features.',
   },
@@ -51,7 +53,20 @@ const projects: ProjectProps[] = [
     image: digittallyApp,
     category: ['SaaS'],
     description:
-      'Complex SaaS platform — invoices, payroll, taxes, and more across a large team codebase.',
+      'Complex SaaS platform for invoices, payroll, taxes, and more across a large team codebase.',
+  },
+  {
+    title: 'GiriCarts Vendor Dashboard',
+    image: cartsVendor,
+    category: ['E-commerce', 'SaaS'],
+    description:
+      'Multi-branch vendor management with HQ and branch level access control.',
+  },
+  {
+    title: 'GiriCarts Marketing Website',
+    image: giricarts,
+    category: ['E-commerce', 'Marketing Website'],
+    description: 'Marketing website for a cross-border e-commerce platform.',
   },
   {
     title: 'GiriToday Admin',
@@ -68,25 +83,25 @@ const projects: ProjectProps[] = [
       'Seller tools for product listings, inventory management, and order fulfillment.',
   },
   {
-    title: 'Digit-tally Landing Page V2',
+    title: 'Digit-tally Marketing Website V2',
     image: digiWeb,
-    category: ['SaaS', 'Landing Page'],
+    category: ['SaaS', 'Marketing Website'],
     description:
-      'Full redesign — stronger visual hierarchy and a more polished first impression.',
+      'Full redesign with a stronger visual hierarchy and a more polished first impression.',
   },
   {
-    title: 'GiriToday Landing Page V2',
+    title: 'GiriToday Marketing Website V2',
     image: giriWebV,
-    category: ['E-commerce', 'Landing Page'],
+    category: ['E-commerce', 'Marketing Website'],
     description:
-      'Second iteration, cleaner UI — one of three versions shipped in under a year.',
+      'Second iteration with a cleaner UI. One of three versions shipped in under a year.',
   },
   {
     title: 'GiriToday Referral Hub',
     image: giriReferral,
     category: ['E-commerce'],
     description:
-      'Built solo — referral tracking, rewards, and network growth for an e-commerce platform.',
+      'Built solo. Referral tracking, rewards, and network growth for an e-commerce platform.',
   },
   {
     title: 'Digit-tally Timesheet',
@@ -96,28 +111,38 @@ const projects: ProjectProps[] = [
       'Time tracking app for logging hours, monitoring attendance, and streamlining payroll.',
   },
   {
-    title: 'Payrit Website',
+    title: 'Payrit Marketing Website',
     image: payritWeb,
-    category: ['Fintech', 'Landing Page'],
+    category: ['Fintech', 'Marketing Website'],
     description:
-      'First version of the Payrit marketing site — foundation for the V2 redesign.',
+      'First version of the Payrit marketing site, the foundation for the V2 redesign.',
   },
   {
-    title: 'GiriToday Landing Page',
+    title: 'GiriToday Marketing Website',
     image: giriWeb1,
-    category: ['E-commerce', 'Landing Page'],
+    category: ['E-commerce', 'Marketing Website'],
     description:
-      'First iteration of the GiriToday landing page — version one of three.',
+      'First iteration of the GiriToday marketing website, version one of three.',
   },
   {
-    title: 'Digit-tally Landing Page',
+    title: 'Digit-tally Marketing Website',
     image: digittallyPage,
-    category: ['SaaS', 'Landing Page'],
+    category: ['SaaS', 'Marketing Website'],
     description:
-      'Original landing page for Digit-tally, built with a team of two frontend engineers.',
+      'Original marketing website for Digit-tally, built with a team of two frontend engineers.',
   },
-  // { title: 'Etch A Sketch', image: etchASketch, category: ['Other'] },
-  // { title: 'To-Do List', image: todoList, category: ['Other'] },
+  // {
+  //   title: 'Etch A Sketch',
+  //   image: etchASketch,
+  //   category: ['Other'],
+  //   description: 'A browser-based Etch A Sketch built with HTML, CSS, and JavaScript.',
+  // },
+  // {
+  //   title: 'To-Do List',
+  //   image: todoList,
+  //   category: ['Other'],
+  //   description: 'A simple to-do app for organizing and tracking tasks.',
+  // },
 ];
 
 export default projects;
