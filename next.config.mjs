@@ -1,5 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        destination: 'https://muqtadirat.vercel.app/:path*',
+        permanent: true,
+      },
+    ];
+  },
   async rewrites() {
     return [
       {
